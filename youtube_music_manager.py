@@ -183,15 +183,16 @@ def process_song(track):
 
     file_path = os.path.join(SONGS_DIR, f"{title}.m4a")
 
-    # Deduplication Check
+    # Deduplication Check & Database Healing
     if os.path.exists(file_path):
-        log_activity(track_id, "CHECKING_LOCAL_FILE", "File exists locally, verifying hash.")
+        log_activity(track_id, "CHECKING_LOCAL_FILE", "File exists locally.")
         existing_hash = calculate_file_hash(file_path)
 
-        if existing_hash and is_hash_in_db(existing_hash):
-            log_activity(track_id, "DUPLICATE_FOUND", f"Hash {existing_hash} matched. Skipping download.")
+        if existing_hash:
+            # If the file is on disk, assume it is complete and heal the database
+            log_activity(track_id, "FILE_EXISTS", f"Updating DB with hash {existing_hash}.")
             update_track_record(track_id, "downloaded", file_hash=existing_hash, file_path=file_path)
-            print(f"⏩ Skipped (already exists and matched hash): {title}")
+            print(f"⏩ Skipped (file already on disk, DB updated): {title}")
             return
 
     opts = {
@@ -200,6 +201,7 @@ def process_song(track):
         'noplaylist': True,
         'quiet': True,
         'no_warnings': True,
+        'overwrites': True,  # Tells yt-dlp to overwrite existing files
         'sleep_interval_requests': 1,
         'sleep_interval': 3,
         'max_sleep_interval': 8,
@@ -208,6 +210,9 @@ def process_song(track):
             'preferredcodec': 'm4a',
             'preferredquality': '0'
         }],
+        'postprocessor_args': [
+            '-y'  # Tells FFmpeg to overwrite without prompting [y/N]
+        ],
     }
 
     try:
