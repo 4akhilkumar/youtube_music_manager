@@ -36,7 +36,7 @@
     },
     {
         "title": "Sahachari",
-        "artist": "Nobin Paul, Sai Veda Vagdevi, Battu Vijay Kumar, Poorna Chary, Nagarjun Sharma, Anirudh Shandilya Maramraju, Saiesh Poi Panandikar, and Alexis D'Souza",
+        "artist": "Nobin Paul, Sai Veda Vagdevi, Battu Vijay Kumar, Poorna Chary, Nagarjun Sharma, Anirudh Shandilya Maramraju, Saiesh Poi Panandikar and Alexis D'Souza",
         "album": "777 Charlie (Telugu)",
         "image_url": "https://m.media-amazon.com/images/I/71g6Iv3hO4L._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=2330Hx5X5KA"
@@ -872,7 +872,7 @@
         "artist": "M.M. Keeravani, Deepu, G.Sahithi",
         "album": "Eega",
         "image_url": "https://m.media-amazon.com/images/I/71yZRjFQGNL._SX472_SY472_BL0_QL100_.jpg",
-        "youtube_link": "Ne Ne Nani Ne"
+        "youtube_link": "https://music.youtube.com/watch?v=enSDuuxhPvY"
     },
     {
         "title": "Konchem Konchem",
@@ -1544,7 +1544,7 @@
         "artist": "Anirudh Ravichander",
         "album": "Love Insurance Kompany",
         "image_url": "https://m.media-amazon.com/images/I/71vil54MfdL._SX472_SY472_BL0_QL100_.jpg",
-        "youtube_link": "Dheema"
+        "youtube_link": "https://music.youtube.com/watch?v=2ZedAROncPM"
     },
     {
         "title": "Love Like That",
@@ -3141,5 +3141,26 @@
         "album": "Odum Kuthira Chaadum Kuthira",
         "image_url": "https://m.media-amazon.com/images/I/51f6fR+zH5L._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=iZyU5jLQL-4"
+    },
+    {
+        "title": "Maname",
+        "artist": "Sarah Black",
+        "album": "Maname",
+        "image_url": "https://m.media-amazon.com/images/I/51BpGZqSHOL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=9cbPM9MYJgI"
+    },
+    {
+        "title": "Rai Rai Raa Raa",
+        "artist": "A.R. Rahman and Anantha Sriram",
+        "album": "Peddi",
+        "image_url": "https://m.media-amazon.com/images/I/51ZFbwn-d9L._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=PDBOAXeEcRg"
+    },
+    {
+        "title": "Aaja Raja",
+        "artist": "Anirudh Ravichander and Chintu",
+        "album": "KH x RK Reunion",
+        "image_url": "https://m.media-amazon.com/images/I/51vv+lnkebL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=T4Q4kIuddKk"
     }
 ]
