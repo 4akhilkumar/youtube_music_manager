@@ -2,6 +2,7 @@ import concurrent.futures
 import hashlib
 import json
 import os
+import re
 import sqlite3
 import sys
 
@@ -18,13 +19,20 @@ DB_PATH = os.path.join(BASE_DIR, "downloads.db")
 # Ensure the output directory exists without halting the script
 os.makedirs(SONGS_DIR, exist_ok=True)
 
+# ==== Helper Functions ====
+def sanitize_folder_name(name):
+    """Removes invalid characters for OS folder names."""
+    if not name or name.strip() == "":
+        return "Unknown Album"
+    sanitized = re.sub(r'[\\/*?:"<>|]', "", name)
+    return sanitized.strip()
+
 # ==== Database Functions ====
 def init_db():
-    """Initializes the SQLite database with tracking and activity tables."""
+    """Initializes the database and safely upgrades existing tables."""
     with sqlite3.connect(DB_PATH) as conn:
         cursor = conn.cursor()
 
-        # Main tracks table updated with hash and path columns
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS tracks (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -32,6 +40,7 @@ def init_db():
                 artist TEXT,
                 album TEXT,
                 image_url TEXT,
+                image_blob BLOB,
                 youtube_link TEXT UNIQUE,
                 status TEXT,
                 error TEXT,
@@ -40,7 +49,12 @@ def init_db():
             )
         """)
 
-        # New table to track detailed activity logs
+        # Safely attempt to add the image_blob column if upgrading an older DB
+        try:
+            cursor.execute("ALTER TABLE tracks ADD COLUMN image_blob BLOB")
+        except sqlite3.OperationalError:
+            pass # Column already exists
+
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS activity_log (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -100,7 +114,7 @@ def sync_json_to_db():
     if inserted_count > 0:
         print(f"Added {inserted_count} new tracks to the database.")
 
-def update_track_record(track_id, status, error_msg="", file_hash=None, file_path=None):
+def update_track_record(track_id, status, error_msg="", file_hash=None, file_path=None, image_blob=None):
     """Updates the track's status and optionally its hash and path."""
     with sqlite3.connect(DB_PATH, timeout=15) as conn:
         cursor = conn.cursor()
@@ -108,9 +122,10 @@ def update_track_record(track_id, status, error_msg="", file_hash=None, file_pat
             UPDATE tracks
             SET status = ?, error = ?,
                 file_hash = COALESCE(?, file_hash),
-                file_path = COALESCE(?, file_path)
+                file_path = COALESCE(?, file_path),
+                image_blob = COALESCE(?, image_blob)
             WHERE id = ?
-        """, (status, error_msg, file_hash, file_path, track_id))
+        """, (status, error_msg, file_hash, file_path, image_blob, track_id))
         conn.commit()
 
 def get_pending_tracks():
@@ -175,11 +190,17 @@ def process_song(track):
     """Handles logic, deduplication, downloading, and logging for one track."""
     track_id = track["id"]
     title = track["title"].replace("/", "-").strip()
+    album_name = sanitize_folder_name(track["album"])
     url = track["youtube_link"]
 
     update_track_record(track_id, "processing")
     log_activity(track_id, "STARTED", f"Began processing track: {title}")
     print(f"🎶 Started: {title}")
+
+    # Create the album directory dynamically
+    # album_dir = os.path.join(SONGS_DIR, album_name)
+    # os.makedirs(album_dir, exist_ok=True)
+    # file_path = os.path.join(album_dir, f"{title}.m4a")
 
     file_path = os.path.join(SONGS_DIR, f"{title}.m4a")
 
@@ -202,6 +223,7 @@ def process_song(track):
         'quiet': True,
         'no_warnings': True,
         'overwrites': True,  # Tells yt-dlp to overwrite existing files
+        # 'cookiefile': os.path.join(BASE_DIR, 'cookies.txt'),
         'sleep_interval_requests': 1,
         'sleep_interval': 3,
         'max_sleep_interval': 8,
@@ -222,20 +244,30 @@ def process_song(track):
             ydl.download([url])
         log_activity(track_id, "AUDIO_SUCCESS", "Audio downloaded successfully.")
 
-        # 2. Download image
-        log_activity(track_id, "DOWNLOADING_IMAGE", f"Fetching image from {track['image_url']}")
-        img_bytes = download_image(track["image_url"])
+        # 2. Handle Image Data (Cache vs Download)
+        img_bytes = track.get("image_blob")
+        if img_bytes:
+            log_activity(track_id, "IMAGE_CACHE", "Using cached album image from database.")
+        elif track.get("image_url"):
+            log_activity(track_id, "DOWNLOADING_IMAGE", f"Fetching image from {track['image_url']}")
+            img_bytes = download_image(track["image_url"])
 
         # 3. Add metadata
         if os.path.exists(file_path):
             log_activity(track_id, "ADDING_METADATA", "Writing ID3 tags and cover art.")
             add_metadata(file_path, title, track["artist"], track["album"], img_bytes)
 
-            # 4. Hash final file and update
+            # 4. Hash final file and update DB (Saving the image blob if newly downloaded)
             log_activity(track_id, "CALCULATING_HASH", "Generating SHA-256 hash.")
             final_hash = calculate_file_hash(file_path)
 
-            update_track_record(track_id, "downloaded", file_hash=final_hash, file_path=file_path)
+            update_track_record(
+                track_id,
+                "downloaded",
+                file_hash=final_hash,
+                file_path=file_path,
+                image_blob=img_bytes
+            )
             log_activity(track_id, "COMPLETED", f"Finished processing with hash: {final_hash}")
             print(f"✅ Completed: {title}")
         else:
