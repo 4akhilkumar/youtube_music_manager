@@ -36,7 +36,7 @@
     },
     {
         "title": "Sahachari",
-        "artist": "Nobin Paul, Sai Veda Vagdevi, Battu Vijay Kumar, Poorna Chary, Nagarjun Sharma, Anirudh Shandilya Maramraju, Saiesh Poi Panandikar and Alexis D'Souza",
+        "artist": "Nobin Paul, Sai Veda Vagdevi, Battu Vijay Kumar, Poorna Chary, Nagarjun Sharma, Anirudh Shandilya Maramraju, Saiesh Poi Panandikar, Alexis D'Souza",
         "album": "777 Charlie (Telugu)",
         "image_url": "https://m.media-amazon.com/images/I/71g6Iv3hO4L._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=2330Hx5X5KA"
@@ -106,7 +106,7 @@
     },
     {
         "title": "Kiliye",
-        "artist": "Dhibu Ninan Thomas, K.S. Harisankar, Anila Rajeev",
+        "artist": "Dhibu Ninan Thomas, K. S. Harisankar, Anila Rajeev",
         "album": "ARM",
         "image_url": "https://m.media-amazon.com/images/I/71emkG7Jb-L._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=OrWFN1GCH4g"
@@ -138,6 +138,13 @@
         "album": "Aadavari Matalaku Ardhalu Veruley",
         "image_url": "https://m.media-amazon.com/images/I/81q1EMPGWcL._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=8XzaGwn4hIQ"
+    },
+    {
+        "title": "Naa Manasuki",
+        "artist": "Karthik, Gayatri",
+        "album": "Aadavari Matalaku Ardhalu Veruley",
+        "image_url": "https://m.media-amazon.com/images/I/81q1EMPGWcL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=iMwSOjM11b0"
     },
     {
         "title": "Aakaasam Nee Haddhu Ra",
@@ -735,6 +742,13 @@
         "youtube_link": "https://music.youtube.com/watch?v=3tDbMSd_9-g"
     },
     {
+        "title": "Neeve",
+        "artist": "G.V.Prakash Kumar",
+        "album": "Darling",
+        "image_url": "https://m.media-amazon.com/images/I/5144QMHXpiL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=ZqYdYQCW_oc"
+    },
+    {
         "title": "Ninne Ninne",
         "artist": "Chakri, Kousalya",
         "album": "Desamudhuru",
@@ -850,8 +864,15 @@
         "title": "Kannukulla",
         "artist": "Sai Abhyankkar, Jonita Gandhi, Adesh Krishna",
         "album": "Dude",
-        "image_url": "https://m.media-amazon.com/images/I/91EqOqXeZsL._SX472_SY472_BL0_QL100_.jpg",
+        "image_url": "https://m.media-amazon.com/images/I/51NkYIfmYQL._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=52F9tnKSw4A"
+    },
+    {
+        "title": "Singari (Telugu)",
+        "artist": "Sai Abhyankkar",
+        "album": "Dude",
+        "image_url": "https://m.media-amazon.com/images/I/513lziKc3JL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=_zK-mqjIxS0"
     },
     {
         "title": "Oorum Blood",
@@ -960,7 +981,7 @@
     },
     {
         "title": "Bangaru Kodi Petta",
-        "artist": "S.P. Balasubrahmanyam, Chitra",
+        "artist": "S. P. Balasubrahmanyam, Chitra",
         "album": "Gharana Mugudu",
         "image_url": "https://m.media-amazon.com/images/M/MV5BODBmYjYzMjAtYTQwNi00ZWI2LWI3NjEtNzNmOTEwM2MwMGNmXkEyXkFqcGc@._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=UJX5qnZ-Cmk"
@@ -995,7 +1016,7 @@
     },
     {
         "title": "Kammani",
-        "artist": "S. P. Sailaja , S. P. Balasubrahmanyam",
+        "artist": "S. P. Sailaja, S. P. Balasubrahmanyam",
         "album": "Guna",
         "image_url": "https://m.media-amazon.com/images/I/71tdoDVgvML._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=bfTRt2yllQo"
@@ -1261,10 +1282,24 @@
     },
     {
         "title": "Abbanee",
-        "artist": "S. P. Balasubrahmanyam",
-        "album": "Jagadekaveerudu Athiloka Sundari, Chitra",
+        "artist": "S. P. Balasubrahmanyam, Chitra",
+        "album": "Jagadekaveerudu Athiloka Sundari",
         "image_url": "https://m.media-amazon.com/images/I/81ZGAoYGSVL._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=gFIASqhTBPs"
+    },
+    {
+        "title": "Priyatama",
+        "artist": "S. P. Balasubrahmanyam, S. Janaki",
+        "album": "Jagadekaveerudu Athiloka Sundari",
+        "image_url": "https://m.media-amazon.com/images/I/81ZGAoYGSVL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=7ZKJ2e5cBi0"
+    },
+    {
+        "title": "Yamaho Nee",
+        "artist": "S. P. Balasubrahmanyam, S. Janaki",
+        "album": "Jagadekaveerudu Athiloka Sundari",
+        "image_url": "https://m.media-amazon.com/images/I/81ZGAoYGSVL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=Xegep0CmdXc"
     },
     {
         "title": "Hukum - Thalaivar Alappara",
@@ -2192,7 +2227,7 @@
     },
     {
         "title": "Prema Ane",
-        "artist": "S P Balasubramaniam, Swarnalatha",
+        "artist": "S. P. Balasubrahmanyam, Swarnalatha",
         "album": "Premikula Roju",
         "image_url": "https://m.media-amazon.com/images/I/61gcOuTAZmL._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=IRKerW28J3g"
@@ -2271,14 +2306,21 @@
         "title": "Ranga Ranga Rangasthalaana",
         "artist": "Rahul Sipligunj",
         "album": "Rangasthalam",
-        "image_url": "https://m.media-amazon.com/images/I/91Wg3LKQURL._SX472_SY472_BL0_QL100__.jpg",
+        "image_url": "https://lh3.googleusercontent.com/dt5aJXr6VJDP2et1qCp2etcZUg58cJiMeJrs27abL9LqblldubRaR2FXOgw5JlRbrqp47PfDJ9Z-TqU=w544-h544-l90-rj",
         "youtube_link": "https://music.youtube.com/watch?v=sdYDTiCpO4A"
+    },
+    {
+        "title": "Yentha Sakkagunnave",
+        "artist": "Devi Sri Prasad",
+        "album": "Rangasthalam",
+        "image_url": "https://lh3.googleusercontent.com/dt5aJXr6VJDP2et1qCp2etcZUg58cJiMeJrs27abL9LqblldubRaR2FXOgw5JlRbrqp47PfDJ9Z-TqU=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=q7ktR5ms4Z4"
     },
     {
         "title": "Aa Gattununtaava",
         "artist": "Shiva Naagulu",
         "album": "Rangasthalam",
-        "image_url": "https://m.media-amazon.com/images/I/91Wg3LKQURL._SX472_SY472_BL0_QL100_.jpg",
+        "image_url": "https://lh3.googleusercontent.com/dt5aJXr6VJDP2et1qCp2etcZUg58cJiMeJrs27abL9LqblldubRaR2FXOgw5JlRbrqp47PfDJ9Z-TqU=w544-h544-l90-rj",
         "youtube_link": "https://music.youtube.com/watch?v=YCtUe7dritU"
     },
     {
@@ -2390,7 +2432,7 @@
         "title": "Sahiba",
         "artist": "Aditya Rikhari",
         "album": "Sahiba",
-        "image_url": "https://c.saavncdn.com/140/Sahiba-Hindi-2023-20231213191015-500x500.jpg",
+        "image_url": "https://m.media-amazon.com/images/I/41A+0JX5pyL._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=tNc2coVC2aw"
     },
     {
@@ -2710,7 +2752,7 @@
     },
     {
         "title": "Mallika Gandha",
-        "artist": "Sid Sriram & Krishna Kanth",
+        "artist": "Sid Sriram, Krishna Kanth",
         "album": "Telusu Kada",
         "image_url": "https://m.media-amazon.com/images/I/91WAvrPFjJL._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=lI_q7M98SyQ"
@@ -2731,7 +2773,7 @@
     },
     {
         "title": "Vaa Vaa Pakkam Vaa",
-        "artist": "Ilaiyaraaja, S.P. Balasubrahmanyam, Vani Jairam",
+        "artist": "Ilaiyaraaja, S. P. Balasubrahmanyam, Vani Jairam",
         "album": "Thangamagan",
         "image_url": "https://m.media-amazon.com/images/I/719T-Ob3mzL._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=ku07kk2mQQw"
@@ -2780,7 +2822,7 @@
     },
     {
         "title": "Guns and Roses",
-        "artist": "Thaman S & Harsha Darivemula",
+        "artist": "Thaman S, Harsha Darivemula",
         "album": "They Call Him OG",
         "image_url": "https://m.media-amazon.com/images/I/71Ujw3WcqEL._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=lN4w71AiO_o"
@@ -3137,7 +3179,7 @@
     },
     {
         "title": "Duppattawaali",
-        "artist": "Justin Varghese, Sanjith Hegde, Anila Rajeev and Suhail Koya",
+        "artist": "Justin Varghese, Sanjith Hegde, Anila Rajeev, Suhail Koya",
         "album": "Odum Kuthira Chaadum Kuthira",
         "image_url": "https://m.media-amazon.com/images/I/51f6fR+zH5L._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=iZyU5jLQL-4"
@@ -3221,9 +3263,240 @@
     },
     {
         "title": "Vizhi Veekura",
-        "artist": "Sai Abhyankkar, Sai Smriti & Adesh Krishna",
+        "artist": "Sai Abhyankkar, Sai Smriti, Adesh Krishna",
         "album": "Vizhi Veekura",
         "image_url": "https://m.media-amazon.com/images/I/516mBAko-oL._SX472_SY472_BL0_QL100_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=NpjqsmURu9w"
+    },
+    {
+        "title": "23 Theme",
+        "artist": "Hector Salamanca, Anirudh Ravichander",
+        "album": "AA23",
+        "image_url": "https://m.media-amazon.com/images/I/51JVZZAV68L._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=F3loRkol8xs"
+    },
+    {
+        "title": "The Paradise Theme OST",
+        "artist": "Anirudh Ravichander, Arjun Chandy",
+        "album": "The Paradise",
+        "image_url": "https://m.media-amazon.com/images/I/51JVZZAV68L._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=UT8LK4Dx_kI"
+    },
+    {
+        "title": "Aaya Sher",
+        "artist": "Addula Jangireddy, Arjun Chandy",
+        "album": "The Paradise",
+        "image_url": "https://m.media-amazon.com/images/I/518ba+mS1NL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=lbEtG0ZjyJA"
+    },
+    {
+        "title": "Endhayya Saami",
+        "artist": "Ajay Atul, Shweta Mohan, Ajay Gogavale, Ramajogayya Sastry",
+        "album": "Ranabaali",
+        "image_url": "https://m.media-amazon.com/images/I/51LR+b4SnkL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=sANnRGWDQHQ"
+    },
+    {
+        "title": "Gira Gira Gingiraagirey",
+        "artist": "Ram Miriyala",
+        "album": "Champion",
+        "image_url": "https://m.media-amazon.com/images/I/41UXAS9TdUL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=peMKYjnH9ZE"
+    },
+    {
+        "title": "Marandhu Poche",
+        "artist": "Sean Roldan, Adithya RK, Madhan",
+        "album": "With Love",
+        "image_url": "https://m.media-amazon.com/images/I/51p-5WIprEL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=Zv2CHQfnCKU"
+    },
+    {
+        "title": "Minnalvala",
+        "artist": "Jakes Bejoy, Sid Sriram, Sithara Krishnakumar",
+        "album": "Narivetta",
+        "image_url": "https://m.media-amazon.com/images/I/51bOp9No13L._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=-76FUKpIz_g"
+    },
+    {
+        "title": "Billa - Theme Music",
+        "artist": "Ranjith, RiTA",
+        "album": "Billa",
+        "image_url": "https://lh3.googleusercontent.com/d90QbY1EyMFx8VHFmZAZaQZp3Lv-fOKeig0GzJ6nR6jQLSJJEZ-kK484Hx92b0oi2vg3LUnmrgEd32yh=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=0KuLFtTcC6s"
+    },
+    {
+        "title": "My Name Is Billa",
+        "artist": "Ranjith, Naveen",
+        "album": "Billa",
+        "image_url": "https://lh3.googleusercontent.com/d90QbY1EyMFx8VHFmZAZaQZp3Lv-fOKeig0GzJ6nR6jQLSJJEZ-kK484Hx92b0oi2vg3LUnmrgEd32yh=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=cNJLWXE5CrI"
+    },
+    {
+        "title": "Na Cheli Rojave",
+        "artist": "S. P. Balasubrahmanyam, Sujatha",
+        "album": "Roja",
+        "image_url": "https://lh3.googleusercontent.com/PRsjlckRiYvOEDKlHylwxUR1LyOTH-ooh5QfVZtmpa8amT-v2J4n0xO6AwOdC8awUYePx_A6BbZ57Ak=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=72XrGGUZ26Y"
+    },
+    {
+        "title": "Kanne Pillavani",
+        "artist": "S. P. Balasubrahmanyam, S. Janaki",
+        "album": "Aakali Rajyam",
+        "image_url": "https://m.media-amazon.com/images/I/41KsDxSzIFL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=xc8CnARsTCE"
+    },
+    {
+        "title": "Oohalu Oorege Gaalanthaa",
+        "artist": "Haricharan, Keerthana",
+        "album": "Sammohanam",
+        "image_url": "https://lh3.googleusercontent.com/Q65fdq1ILYMMGnh90a83YdlA8vj8Vqnm6PnIP6yjLT9Q9b-jfIYp5wG0m0zK0T8iJy_VTlHW_7RIUKW7=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=KgZArZLaL4Q"
+    },
+    {
+        "title": "Oh Isha",
+        "artist": "Armaan Malik, Chinmayi Sripada, Sricharan Pakala",
+        "album": "Major",
+        "image_url": "https://lh3.googleusercontent.com/0P6-ewxIkyCbNwdn2Ve3slTzcVl7MrNpNtWxGR20yV-QdeV0IUfYvO9GYCXg33N0Eo-RDzo_iv-a5FsKdg=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=K9soWqtjyNg"
+    },
+    {
+        "title": "Ghal Ghal",
+        "artist": "S. P. Balasubrahmanyam",
+        "album": "Nuvvostanante Nenoddantana",
+        "image_url": "https://m.media-amazon.com/images/I/81ftSqoyInL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=6S6bxUZdkZk"
+    },
+    {
+        "title": "Adirey Adirey",
+        "artist": "Jessi Gift, Kalpana",
+        "album": "Nuvvostanante Nenoddantana",
+        "image_url": "https://m.media-amazon.com/images/I/81ftSqoyInL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=OeUhzFRNomE"
+    },
+    {
+        "title": "Narasimha",
+        "artist": "S. P. Balasubrahmanyam",
+        "album": "Narasimha",
+        "image_url": "https://lh3.googleusercontent.com/aNSM41R9P-XhvtLXhsXJZmD-UxhPSOuiXz9B0Msqm1tfNJX82sS375RnqlMVy3MdzgKnY1ZKTCrEVzua=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=tMxDi81FaX0"
+    },
+    {
+        "title": "NarasChuttu Chuttiimha",
+        "artist": "S. P. Balasubrahmanyam, Harini",
+        "album": "Narasimha",
+        "image_url": "https://lh3.googleusercontent.com/aNSM41R9P-XhvtLXhsXJZmD-UxhPSOuiXz9B0Msqm1tfNJX82sS375RnqlMVy3MdzgKnY1ZKTCrEVzua=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=MG1Qu50uI-o"
+    },
+    {
+        "title": "Meriseti Puvvaa",
+        "artist": "Srinivas, Nithyasree Mahadevan, Palakkad Sriram",
+        "album": "Narasimha",
+        "image_url": "https://lh3.googleusercontent.com/aNSM41R9P-XhvtLXhsXJZmD-UxhPSOuiXz9B0Msqm1tfNJX82sS375RnqlMVy3MdzgKnY1ZKTCrEVzua=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=Ve0Aaju0Vfg"
+    },
+    {
+        "title": "Yekku Tholi Mettu",
+        "artist": "Palakkad Sriram",
+        "album": "Narasimha",
+        "image_url": "https://lh3.googleusercontent.com/aNSM41R9P-XhvtLXhsXJZmD-UxhPSOuiXz9B0Msqm1tfNJX82sS375RnqlMVy3MdzgKnY1ZKTCrEVzua=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=GumG1b56yzI"
+    },
+    {
+        "title": "Idhera",
+        "artist": "Mohith Chauhan, Radhan",
+        "album": "Yevade Subramanyam",
+        "image_url": "https://lh3.googleusercontent.com/h56J0MC41g9YSX4Qavw6lwu5vgaTxBpIKum9RmvkcRHjrJn6VS1-NiNRZ-muMg1mBdyqdazjTXaS2bU=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=Ra_HVLoecxc"
+    },
+    {
+        "title": "Nijam Idhe Kadaa",
+        "artist": "Sid Sriram",
+        "album": "Raja Raja Chora",
+        "image_url": "https://m.media-amazon.com/images/I/51wzbsPZa7L._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=Sz6dtC0nCBo"
+    },
+    {
+        "title": "Anaganaga Kadala",
+        "artist": "Karthik, Sumangali",
+        "album": "Venky",
+        "image_url": "https://m.media-amazon.com/images/I/619XKrOinpL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=kRhBrarOJPQ"
+    },
+    {
+        "title": "Silakemo",
+        "artist": "Sreeram, Malathi",
+        "album": "Venky",
+        "image_url": "https://m.media-amazon.com/images/I/619XKrOinpL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=kuiRGqPSFVQ"
+    },
+    {
+        "title": "Gongoora Thota",
+        "artist": "Pushpavanam Kuppu Swamy, Kalapana",
+        "album": "Venky",
+        "image_url": "https://m.media-amazon.com/images/I/619XKrOinpL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=LTlzWFsPYI8"
+    },
+    {
+        "title": "Pottala Muttaye",
+        "artist": "Sublahshini, Vivek",
+        "album": "Thalaivan Thalaivii",
+        "image_url": "https://m.media-amazon.com/images/I/51ZtrwINKcL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=fEc4PsPJXfg"
+    },
+    {
+        "title": "Gajulu Gallumannaye",
+        "artist": "Usha, R. P. Patnaik",
+        "album": "Dil",
+        "image_url": "https://m.media-amazon.com/images/I/61PuMU-yeBL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=CFI_hFLt1J8"
+    },
+    {
+        "title": "Arerey Manasa",
+        "artist": "Vivek Sagar, Sid Sriram, Kittu Vissapragada",
+        "album": "Falaknuma Das",
+        "image_url": "https://m.media-amazon.com/images/I/51-mn1LtivL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=pb1NL71uFBs"
+    },
+    {
+        "title": "Cheliya",
+        "artist": "Jeans Srinivas, Harini",
+        "album": "Kushi",
+        "image_url": "https://m.media-amazon.com/images/I/61otAriZMAL._SX472_SY472_BL0_QL100_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=n34o1HOoiu4"
+    },
+    {
+        "title": "Chilaka Pacha Koka",
+        "artist": "Mano, Radhika",
+        "album": "Narasimha Naidu",
+        "image_url": "https://lh3.googleusercontent.com/tZ8dH80J4nB2WDiOeX8okJ-jtxcwlF-qSF6piH4VGDY5hzMeif9RaD3f9QVYlaJg3d1ou1gnaw6wpZU=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=q0ShusYfktE"
+    },
+    {
+        "title": "Jabilli Kosam (Female Version)",
+        "artist": "S. Janaki",
+        "album": "Manchi Manasulu",
+        "image_url": "https://lh3.googleusercontent.com/hj2glIVEjXuVYxCEJhDyQlbdCq1etmxNqCs0WjsTxOknwQM8FQMGspxAddpOJlmAQcjrhKki7ERmrHpD=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=jMHPKhU53vY"
+    },
+    {
+        "title": "Aakasam Yenatido",
+        "artist": "S. Janaki",
+        "album": "Nireekshana",
+        "image_url": "https://c.saavncdn.com/555/Nireekshana-Telugu-1982-500x500.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=mpyUHoyGAdo"
+    },
+    {
+        "title": "Mate Rani",
+        "artist": "S. P. Balasubrahmanyam",
+        "album": "O Papa Lali",
+        "image_url": "https://lh3.googleusercontent.com/LMwtiEkVTLuabwADH7eDv3m2w0-skyjUG8G7VIxWFAnr3K7ApoHVAJ4fegK-kJdIlUmCafljlH66BMfW=w544-h544-l90-rj",
+        "youtube_link": "https://music.youtube.com/watch?v=Z_kI3MmwA9w"
+    },
+    {
+        "title": "Padavi Datani",
+        "artist": "Sunitha, Ramana Gogula",
+        "album": "Thammudu",
+        "image_url": "https://m.media-amazon.com/images/I/61FaprX9CXL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=HIY-4cFzPh8"
     }
 ]
