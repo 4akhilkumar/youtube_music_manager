@@ -1,3 +1,6 @@
 mutagen==1.47.0
 requests==2.33.0
-yt-dlp==2026.3.17
+# YouTube changes break stream downloads periodically; a stale pin shows up as
+# "HTTP Error 403: Forbidden" on every download while metadata still resolves.
+# Bump this when that happens: pip install --upgrade yt-dlp
+yt-dlp==2026.7.4
