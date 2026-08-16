@@ -1,2 +1,17 @@
 Songs/
 venv/
+
+# Local state, not source. The cover-art blobs make this ~80MB, and every
+# commit that touched it added another full copy to the repository.
+downloads.db
+downloads.db-wal
+downloads.db-shm
+downloads.db.bak
+downloads.db.prechange
+*.old
+
+# macOS / Python noise
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
