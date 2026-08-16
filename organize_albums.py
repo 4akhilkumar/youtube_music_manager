@@ -1,31 +1,23 @@
+"""Files downloaded tracks into Songs/<album>/ folders.
+
+The downloader now writes straight into the album folder, so this is a
+safety net for tracks left in the flat Songs/ root by older runs or moved
+by hand - not a required second step.
+"""
+
 import os
-import re
 import shutil
 import sqlite3
 
-# ==== Configuration & Paths ====
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-SONGS_DIR = os.path.join(BASE_DIR, "Songs")
-DB_PATH = os.path.join(BASE_DIR, "downloads.db")
-
-def sanitize_folder_name(name):
-    """Removes invalid characters for OS folder names."""
-    if not name or name.strip() == "":
-        return "Unknown Album"
-
-    # Replace invalid characters (like / \ : * ? " < > |) with nothing
-    sanitized = re.sub(r'[\\/*?:"<>|]', "", name)
-    return sanitized.strip()
+from common import SONGS_DIR, album_dirname, get_conn, resolve_path, store_path, track_filename
 
 def organize_songs_by_album():
-    if not os.path.exists(DB_PATH):
-        print(f"Error: Database not found at {DB_PATH}")
-        return
-
     moved_count = 0
     skipped_count = 0
+    missing_count = 0
+    conflict_count = 0
 
-    with sqlite3.connect(DB_PATH) as conn:
+    with get_conn() as conn:
         conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
 
@@ -42,56 +34,58 @@ def organize_songs_by_album():
         for track in tracks:
             track_id = track["id"]
             title = track["title"]
-            title = track["title"].replace("/", "-").strip()
-            album_name = track["album"]
-            current_path = track["file_path"]
+            current_path = resolve_path(track["file_path"])
 
-            # Skip if the file path is missing or the file doesn't actually exist
-            if not current_path or not os.path.exists(current_path):
-                print(f"Warning: File not found for '{title}' at {current_path}. Skipping.")
+            album_dir = os.path.join(SONGS_DIR, album_dirname(track["album"]))
+            new_path = os.path.join(album_dir, track_filename(title))
+
+            # Already filed correctly - by far the common case now.
+            if current_path and os.path.normpath(current_path) == os.path.normpath(new_path) \
+                    and os.path.exists(new_path):
                 skipped_count += 1
                 continue
 
-            # Create a safe folder name for the album
-            safe_album_name = sanitize_folder_name(album_name)
-            album_dir = os.path.join(SONGS_DIR, safe_album_name)
+            # Skip if the file path is missing or the file doesn't actually exist
+            if not current_path or not os.path.exists(current_path):
+                print(f"Warning: File not found for '{title}' at {track['file_path']}. Skipping.")
+                missing_count += 1
+                continue
 
-            # Create the album directory if it does not exist
-            os.makedirs(album_dir, exist_ok=True)
+            # Never overwrite: two tracks sharing a title within one album would
+            # otherwise silently destroy each other's audio.
+            if os.path.exists(new_path):
+                print(f"Conflict: '{title}' - {store_path(new_path)} already exists. Leaving in place.")
+                conflict_count += 1
+                continue
 
-            # Define the new target path
-            filename = os.path.basename(current_path)
-            new_path = os.path.join(album_dir, filename)
+            try:
+                os.makedirs(album_dir, exist_ok=True)
+                shutil.move(current_path, new_path)
 
-            # Move the file if it is not already in the correct folder
-            if current_path != new_path:
-                try:
-                    shutil.move(current_path, new_path)
+                # Commit per file. Moving everything and committing once at the
+                # end leaves the database describing the old layout if the run
+                # is interrupted partway through.
+                cursor.execute("UPDATE tracks SET file_path = ? WHERE id = ?",
+                               (store_path(new_path), track_id))
+                cursor.execute("""
+                    INSERT INTO activity_log (track_id, action, details)
+                    VALUES (?, ?, ?)
+                """, (track_id, "MOVED_TO_ALBUM", f"Moved to {store_path(album_dir)}"))
+                conn.commit()
 
-                    # Update the database with the new file path
-                    cursor.execute("UPDATE tracks SET file_path = ? WHERE id = ?", (new_path, track_id))
-
-                    # Log the activity
-                    cursor.execute("""
-                        INSERT INTO activity_log (track_id, action, details)
-                        VALUES (?, ?, ?)
-                    """, (track_id, "MOVED_TO_ALBUM", f"Moved to {album_dir}"))
-
-                    print(f"Moved: '{title}' -> {safe_album_name}/")
-                    moved_count += 1
-                except Exception as e:
-                    print(f"Error moving '{title}': {e}")
-                    skipped_count += 1
-            else:
-                # File is already in the correct album folder
+                print(f"Moved: '{title}' -> {os.path.basename(album_dir)}/")
+                moved_count += 1
+            except (OSError, sqlite3.Error) as e:
+                conn.rollback()
+                print(f"Error moving '{title}': {e}")
                 skipped_count += 1
-
-        conn.commit()
 
     print("\n==== ORGANIZATION SUMMARY ====")
     print(f"Total processed: {len(tracks)}")
     print(f"Successfully moved: {moved_count}")
-    print(f"Skipped (already in place or missing): {skipped_count}")
+    print(f"Already in place: {skipped_count}")
+    print(f"Missing files: {missing_count}")
+    print(f"Name conflicts: {conflict_count}")
     print("==============================\n")
 
 if __name__ == "__main__":
