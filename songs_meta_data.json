@@ -3505,5 +3505,54 @@
         "album": "ARDIPITHECUS",
         "image_url": "https://m.media-amazon.com/images/I/517Qg0xpJGL._UX716_FMwebp_QL85_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=h4OAXvDRZTY"
+    },
+    {
+        "title": "Oh My Darling",
+        "artist": "Manisha Eerabathini",
+        "album": "30 Weds 21",
+        "image_url": "https://m.media-amazon.com/images/I/41Ob+VywlWL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=znsNzFpF6UI"
+    },
+    {
+        "title": "残酷な天使のテーゼ",
+        "artist": "Yoko Takahash",
+        "album": "Zankoku na Tenshi no Thesis",
+        "image_url": "https://m.media-amazon.com/images/I/515aJcQhmgL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=xyVatKhd4s4"
+    },
+    {
+        "title": "Karukara",
+        "artist": "Avial",
+        "album": "Avial",
+        "image_url": "https://m.media-amazon.com/images/I/51bsvDTeE3L._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=uawpX1NiMcY"
+    },
+    {
+        "title": "Nilaave Vaa",
+        "artist": "Ilaiyaraaja & S.P. Balasubrahmanyam",
+        "album": "Mouna Ragam",
+        "image_url": "https://m.media-amazon.com/images/I/51elfvdVQ7L._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=K_fN5yysMHg"
+    },
+    {
+        "title": "Enakenna Yaarum Illaye",
+        "artist": "Anirudh Ravichander & Vignesh Shivan",
+        "album": "Aakko",
+        "image_url": "https://m.media-amazon.com/images/I/51TFdjjFELL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=b_ZGAdrvpks"
+    },
+    {
+        "title": "Taralirada",
+        "artist": "S. P. Balasubrahmanyam",
+        "album": "Rudra Veena",
+        "image_url": "https://m.media-amazon.com/images/I/510K2m1h5iL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=bBMlyIf33ig"
+    },
+    {
+        "title": "Saagara Shayana Vibho (A Prelude)",
+        "artist": "Agam",
+        "album": "Saagara Shayana Vibho (A Prelude)",
+        "image_url": "https://m.media-amazon.com/images/I/81NeBsdPdwL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=ex-OqOHNK10&list=OLAK5uy_mgqOWpjSNmr2h87Yv_5Vi4xPC8d84t7oU"
     }
 ]
