@@ -716,11 +716,14 @@ def run_review(count=150, apply_changes=False):
         scored.append(((-disagreement, confidence), row, seed))
     scored.sort(key=lambda item: item[0])
 
-    wanted = max(0, count - len(existing))
-    batch = scored[:wanted]
+    # count is how many NEW tracks to add, not the target file size. Sizing it
+    # against the file total meant that once review.json covered the library,
+    # newly downloaded tracks were silently never offered for review.
+    batch = scored[:count]
     print(f"Analyzed tracks:        {len(tracks)}")
     print(f"Already hand-labelled:  {len(already)}")
-    print(f"New tracks added:       {len(batch)}  (most contested first)")
+    print(f"Awaiting review:        {len(scored)}")
+    print(f"Added to review file:   {len(batch)}  (most contested first)")
     print(f"Review file total:      {len(existing) + len(batch)}")
 
     by_id = {row["id"]: row for row in tracks}
@@ -1089,7 +1092,7 @@ def main():
     parser.add_argument("--count", type=int, default=15,
                         help="prompts to generate per category (default 15)")
     parser.add_argument("--count-review", type=int, default=150, metavar="N",
-                        help="tracks to export for review (default 150)")
+                        help="NEW tracks to add to the review file (default 150)")
     args = parser.parse_args()
 
     init_schema()
