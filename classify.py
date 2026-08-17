@@ -892,6 +892,78 @@ def _feature_vector(row):
     return np.concatenate([row["mert"], [bpm / 200.0, row["energy"] or 0.0]])
 
 
+# ==== Feature portability ====
+FEATURES_PATH = os.path.join(BASE_DIR, "features.npz")
+
+
+def run_export_features(apply_changes=False):
+    """Writes the cached embeddings to a compact portable archive.
+
+    track_features is the only expensive thing in the database - 30-60 minutes
+    of decoding and inference. Everything else in there either regenerates
+    cheaply or already lives in review.json. Keeping these ~3 MB separately
+    means the cache survives a rebuilt, moved or corrupted database.
+    """
+    import numpy as np
+
+    rows = load_features()
+    if not rows:
+        print("No cached features to export. Run --analyze --apply first.")
+        return
+
+    print(f"Features to export: {len(rows)}")
+    if not apply_changes:
+        print("\nDry run - nothing written. Re-run with --apply.")
+        return
+
+    np.savez_compressed(
+        FEATURES_PATH,
+        track_ids=np.array([r["id"] for r in rows], dtype=np.int64),
+        mert=np.stack([r["mert"] for r in rows]),
+        clap=np.stack([r["clap"] for r in rows]),
+        bpm=np.array([r["bpm"] or 0.0 for r in rows], dtype=np.float32),
+        energy=np.array([r["energy"] or 0.0 for r in rows], dtype=np.float32),
+        duration=np.array([r["duration"] or 0.0 for r in rows], dtype=np.float32),
+        model_version=np.array([f"{MERT_MODEL}|{CLAP_MODEL}"]),
+    )
+    print(f"Wrote {FEATURES_PATH} "
+          f"({os.path.getsize(FEATURES_PATH) / 1048576:.1f} MB)")
+
+
+def run_restore_features(apply_changes=False):
+    """Rebuilds track_features from the archive, skipping a full re-analysis."""
+    import numpy as np
+
+    if not os.path.exists(FEATURES_PATH):
+        print(f"No {os.path.basename(FEATURES_PATH)} to restore from.")
+        return
+
+    data = np.load(FEATURES_PATH, allow_pickle=False)
+    ids = data["track_ids"]
+    have = analyzed_ids()
+    missing = [i for i in ids.tolist() if i not in have]
+    print(f"Features in archive: {len(ids)}")
+    print(f"Already in database: {len(ids) - len(missing)}")
+    print(f"Would restore:       {len(missing)}")
+
+    if not apply_changes:
+        print("\nDry run - nothing written. Re-run with --apply.")
+        return
+
+    stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    version = str(data["model_version"][0])
+    restored = 0
+    for index, track_id in enumerate(ids.tolist()):
+        if track_id in have:
+            continue
+        store_features(track_id, float(data["bpm"][index]),
+                       float(data["energy"][index]), float(data["duration"][index]),
+                       data["mert"][index].astype(np.float32),
+                       data["clap"][index].astype(np.float32))
+        restored += 1
+    print(f"Restored {restored} tracks ({version}, as of {stamp}).")
+
+
 # ==== Predict ====
 def run_predict(apply_changes=False, threshold=0.5):
     """Scores every analyzed track with the trained probe."""
@@ -1079,6 +1151,10 @@ def main():
                         help="score every track with the trained probe")
     parser.add_argument("--export", action="store_true",
                         help="write playlists and/or embed MP4 tags")
+    parser.add_argument("--export-features", action="store_true",
+                        help="write cached embeddings to features.npz")
+    parser.add_argument("--restore-features", action="store_true",
+                        help="rebuild track_features from features.npz")
     parser.add_argument("--playlists", action="store_true",
                         help="with --export: write Playlists/*.m3u8")
     parser.add_argument("--embed-tags", action="store_true",
@@ -1111,6 +1187,10 @@ def main():
         run_learn(args.apply)
     elif args.predict:
         run_predict(args.apply)
+    elif args.export_features:
+        run_export_features(args.apply)
+    elif args.restore_features:
+        run_restore_features(args.apply)
     elif args.export:
         run_export(args.playlists, args.embed_tags, args.apply)
     else:
