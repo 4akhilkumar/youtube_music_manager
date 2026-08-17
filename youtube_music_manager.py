@@ -3,6 +3,7 @@ import concurrent.futures
 import hashlib
 import json
 import os
+import re
 import shutil
 import sqlite3
 import sys
@@ -28,7 +29,11 @@ from common import (
 # A file smaller than this is a truncated download, not a song.
 MIN_AUDIO_BYTES = 64 * 1024
 MAX_IMAGE_BYTES = 8 * 1024 * 1024
-MAX_WORKERS = 4
+# Four simultaneous downloads tripped YouTube's rate limiter: on 2026-08-17 all
+# four workers started at once and three died with HTTP 403 in under 8 seconds,
+# while the two that got through took ~60. Two still overlaps the network wait
+# with the tagging/hashing tail without bursting.
+MAX_WORKERS = 2
 
 # Statuses that should be picked up on the next run.
 RETRY_STATUSES = ("pending", "failed")
@@ -433,6 +438,27 @@ def finalize_track(track, file_path, image_bytes):
     return final_hash
 
 # ==== Core Worker Functions ====
+ANSI_ESCAPE = re.compile(r"\x1b\[[0-9;]*m")
+
+# Throttling looks identical to a dead video in the log unless it is called out.
+TRANSIENT_ERROR_HINTS = (
+    "http error 403",
+    "http error 429",
+    "too many requests",
+    "temporary failure",
+    "connection reset",
+    "timed out",
+    "read timeout",
+)
+
+def describe_error(exc):
+    """Strips terminal colour codes and flags errors that are worth retrying."""
+    message = ANSI_ESCAPE.sub("", str(exc)).strip()
+    transient = any(hint in message.lower() for hint in TRANSIENT_ERROR_HINTS)
+    if transient:
+        return f"[transient] {message}", True
+    return message, False
+
 def build_ydl_opts(file_path):
     return {
         'format': 'bestaudio[ext=m4a]/bestaudio[acodec^=mp4a]/bestaudio/best',
@@ -448,6 +474,21 @@ def build_ydl_opts(file_path):
         'sleep_interval_requests': 1,
         'sleep_interval': 3,
         'max_sleep_interval': 8,
+        # Only 'deno' is enabled by default, and without a runtime yt-dlp drops to
+        # a deprecated extraction path that warns "some formats may be missing".
+        # Naming both keeps deno's priority if it ever gets installed. Note the
+        # Python API wants {runtime: config}, not the list --js-runtimes takes.
+        'js_runtimes': {'deno': {}, 'node': {}},
+        # A 403 here is usually YouTube throttling, not a dead video, so it is
+        # worth waiting out. Without these yt-dlp gives up on the first refusal
+        # and the track is marked failed for the whole run.
+        'retries': 5,
+        'extractor_retries': 3,
+        'fragment_retries': 10,
+        'retry_sleep_functions': {
+            'http': lambda n: min(4 * (2 ** n), 60),
+            'fragment': lambda n: min(2 * (2 ** n), 30),
+        },
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'm4a',
@@ -505,14 +546,17 @@ def process_song(track):
         return "downloaded"
 
     except Exception as e:
-        error_msg = str(e)
+        error_msg, transient = describe_error(e)
         try:
             update_track_record(track_id, "failed", error_msg)
             log_activity(track_id, "FAILED", error_msg)
         except sqlite3.Error as db_error:
             # Never let a logging failure leave the row stuck in 'processing'.
             print(f"⚠️  Could not record failure for {title}: {db_error}")
-        print(f"❌ Failed: {title} ({error_msg})")
+        if transient:
+            print(f"⏳ Throttled: {title} ({error_msg}) — will retry on the next run")
+        else:
+            print(f"❌ Failed: {title} ({error_msg})")
         return "failed"
 
 def retag_song(track):
