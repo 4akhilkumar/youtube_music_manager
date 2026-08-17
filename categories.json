@@ -1,0 +1,82 @@
+{
+    "_llm": {
+        "provider": "ollama",
+        "model": "gemma4:12b",
+        "endpoint": "http://localhost:11434"
+    },
+
+    "Workout": {
+        "seed": "high energy music to exercise and work out to",
+        "min_bpm": 110
+    },
+    "Travel": {
+        "seed": "breezy open-road music for a daytime journey"
+    },
+    "NightDrive": {
+        "seed": "moody atmospheric music for driving late at night"
+    },
+    "Party": {
+        "seed": "loud celebratory music for a party",
+        "min_bpm": 100
+    },
+    "Dance": {
+        "seed": "a choreographed dance number with a strong hook",
+        "min_bpm": 100
+    },
+    "Mass": {
+        "seed": "swaggering hero-introduction music with punchy percussion and attitude"
+    },
+    "Folk": {
+        "seed": "folk-rooted village music with traditional percussion and rustic vocals"
+    },
+    "Motivational": {
+        "seed": "triumphant uplifting music about rising and winning"
+    },
+
+    "Romantic": {
+        "seed": "an intimate love duet between two people in love"
+    },
+    "Longing": {
+        "seed": "aching music of separation and yearning for someone far away"
+    },
+    "Heartbreak": {
+        "seed": "music of betrayal and the end of a relationship"
+    },
+    "Sad": {
+        "seed": "sorrowful tragic music of grief and loss"
+    },
+    "Melody": {
+        "seed": "a soft tuneful lyric-led melody carried by the singing voice"
+    },
+    "Nostalgic": {
+        "seed": "wistful retro music that evokes memory and a past era"
+    },
+
+    "Chill": {
+        "seed": "calm relaxing mellow music",
+        "max_bpm": 100
+    },
+    "Sleep": {
+        "seed": "a gentle lullaby to fall asleep to",
+        "max_bpm": 95
+    },
+    "Focus": {
+        "seed": "unobtrusive background music for concentration and study"
+    },
+    "Rain": {
+        "seed": "music evoking monsoon rain and wet earth"
+    },
+    "Festival": {
+        "seed": "festive ceremonial music for a wedding or festival procession"
+    },
+
+    "Devotional": {
+        "seed": "devotional worship music addressed to a deity"
+    },
+    "Classical": {
+        "seed": "Indian classical Carnatic or Hindustani art music with raga structure"
+    },
+    "Instrumental": {
+        "seed": "an instrumental score or theme with no singing"
+    }
+}

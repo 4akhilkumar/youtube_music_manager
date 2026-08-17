@@ -122,3 +122,39 @@ def convert_image_to_jpeg(data):
     if result.returncode != 0 or detect_image_format(result.stdout) != "jpeg":
         return None
     return result.stdout
+
+# ==== Audio Decoding ====
+# The classifier needs raw samples, and the two encoders disagree on rate:
+# MERT wants 24 kHz, CLAP wants 48 kHz. ffmpeg is already a hard dependency for
+# the audio post-processing, so it does the resampling rather than a new library.
+def decode_audio(path, sample_rate, seconds=None, offset=0.0, timeout=120):
+    """Decodes an audio file to a mono float32 numpy array at sample_rate.
+
+    Returns None if ffmpeg is unavailable or the file cannot be decoded, so a
+    single unreadable track cannot take down a whole analysis run.
+    """
+    import numpy as np
+
+    if not shutil.which("ffmpeg"):
+        return None
+
+    # -ss before -i seeks by keyframe, which is fast and accurate enough here.
+    command = ["ffmpeg", "-v", "error"]
+    if offset:
+        command += ["-ss", str(offset)]
+    if seconds:
+        command += ["-t", str(seconds)]
+    command += ["-i", path, "-f", "f32le", "-ac", "1", "-ar", str(sample_rate), "pipe:1"]
+
+    try:
+        result = subprocess.run(command, capture_output=True, timeout=timeout, check=False)
+    except (OSError, subprocess.SubprocessError):
+        return None
+
+    if result.returncode != 0 or not result.stdout:
+        return None
+
+    # np.frombuffer returns a read-only view over the subprocess buffer; the
+    # model code writes into these arrays, so hand back an owned copy.
+    samples = np.frombuffer(result.stdout, dtype=np.float32).copy()
+    return samples if samples.size else None

@@ -1,0 +1,5861 @@
+{
+    "_instructions": "Edit the 'tags' list for each track: keep what fits, delete what does not, add any category from '_categories'. A track can have several. Tempo tags (Slow/Mid/Fast) are measured separately and ignored here. Leave 'tags' empty if none apply - that is useful signal, not a gap. When done run: classify.py --learn --apply",
+    "_categories": [
+        "Workout",
+        "Travel",
+        "NightDrive",
+        "Party",
+        "Dance",
+        "Mass",
+        "Folk",
+        "Motivational",
+        "Romantic",
+        "Longing",
+        "Heartbreak",
+        "Sad",
+        "Melody",
+        "Nostalgic",
+        "Chill",
+        "Sleep",
+        "Focus",
+        "Rain",
+        "Festival",
+        "Devotional",
+        "Classical",
+        "Instrumental"
+    ],
+    "tracks": [
+        {
+            "id": 168,
+            "title": "Pottu Thotta Pournami",
+            "artist": "Hesham Abdul Wahab, Sachin Balu, Megha Josekutty",
+            "album": "Hridayam",
+            "bpm": 117.5,
+            "tags": [
+                "Festival",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 208,
+            "title": "Bujji Theme",
+            "artist": "Priya Ragu, Santhosh Narayanan",
+            "album": "Kalki 2898 AD",
+            "bpm": 161.5,
+            "tags": [
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 172,
+            "title": "I.O.Y.A (Ayyo Vayye)",
+            "artist": "Matadoria",
+            "album": "I.O.Y.A (Ayyo Vayye)",
+            "bpm": 99.4,
+            "tags": [
+                "Chill"
+            ]
+        },
+        {
+            "id": 442,
+            "title": "Yaanji",
+            "artist": "Sam C.S., Anirudh Ravichander, Shakthisree Gopalan",
+            "album": "Vikram Vedha",
+            "bpm": 136.0,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 212,
+            "title": "Katchi Sera",
+            "artist": "Sai Abhyankkar",
+            "album": "Katchi Sera",
+            "bpm": 99.4,
+            "tags": [
+                "Dance",
+                "Party",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 304,
+            "title": "Nee Singam Dhan",
+            "artist": "A.R. Rahman, Sid Sriram, Vivek",
+            "album": "Pathu Thala",
+            "bpm": 95.7,
+            "tags": [
+                "Motivational"
+            ]
+        },
+        {
+            "id": 54,
+            "title": "Adaraku",
+            "artist": "Vishwa",
+            "album": "Athadu",
+            "bpm": 99.4,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 400,
+            "title": "Marachipomanna",
+            "artist": "A. R. Rahman",
+            "album": "The Life Of Muthu",
+            "bpm": 117.5,
+            "tags": [
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 453,
+            "title": "Desi Girl 2.0 (Varanasi Event)",
+            "artist": "M.M. Keeravaani, Lipsika Bhashyam, Chaitanya Prasad",
+            "album": "Varanasi",
+            "bpm": 95.7,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 445,
+            "title": "Laayi Laayi",
+            "artist": "Ilaiyaraaja, Bela Shende",
+            "album": "Yeto Vellipoyindhi Manasu",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 144,
+            "title": "Andhama Andhama",
+            "artist": "S. P. Balasubrahmanyam, Chitra",
+            "album": "Govinda Govinda",
+            "bpm": 129.2,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 375,
+            "title": "Skyfall",
+            "artist": "Adele",
+            "album": "Skyfall",
+            "bpm": 152.0,
+            "tags": [
+                "NightDrive"
+            ]
+        },
+        {
+            "id": 473,
+            "title": "Minnalvala",
+            "artist": "Jakes Bejoy, Sid Sriram, Sithara Krishnakumar",
+            "album": "Narivetta",
+            "bpm": 129.2,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 40,
+            "title": "Sai Pallavi's Intro",
+            "artist": "G.V.Prakash Kumar",
+            "album": "Amaran",
+            "bpm": 107.7,
+            "tags": [
+                "Instrumental",
+                "Melody"
+            ]
+        },
+        {
+            "id": 202,
+            "title": "Toofan",
+            "artist": "Sri Krishna, Prudhvi Chandra, Arun Kaundinya, Sai Charan, Santhosh Venky, Mohan Krishna, Sachin Basrur, Ravi Basrur, Puneeth Rudranag, Harini Ivaturi",
+            "album": "KGF Chapter 2 (Telugu)",
+            "bpm": 117.5,
+            "tags": [
+                "Mass",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 265,
+            "title": "Vaisakha Sandhye (Male Version)",
+            "artist": "K. J. Yesudas",
+            "album": "Nadodikkattu",
+            "bpm": 136.0,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 455,
+            "title": "Duppattawaali",
+            "artist": "Justin Varghese, Sanjith Hegde, Anila Rajeev, Suhail Koya",
+            "album": "Odum Kuthira Chaadum Kuthira",
+            "bpm": 95.7,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 291,
+            "title": "Vaa Kannamma",
+            "artist": "Hesham Abdul Wahab, Uthara Unnikrishnan, Vignesh Srikanth",
+            "album": "Once More",
+            "bpm": 129.2,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 226,
+            "title": "Dheema",
+            "artist": "Anirudh Ravichander",
+            "album": "Love Insurance Kompany",
+            "bpm": 129.2,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 469,
+            "title": "The Paradise Theme OST",
+            "artist": "Anirudh Ravichander, Arjun Chandy",
+            "album": "The Paradise",
+            "bpm": 136.0,
+            "tags": [
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 357,
+            "title": "The Glow of Angel",
+            "artist": "Yuvan Shankar Raja",
+            "album": "Sandakozhi",
+            "bpm": 103.4,
+            "tags": [
+                "Instrumental",
+                "Melody"
+            ]
+        },
+        {
+            "id": 95,
+            "title": "Allei Allei",
+            "artist": "A.R. Rahman, Abhay Jodhpurkar, Chinmayi",
+            "album": "Cheliyaa",
+            "bpm": 99.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 124,
+            "title": "Kannukulla",
+            "artist": "Sai Abhyankkar, Jonita Gandhi, Adesh Krishna",
+            "album": "Dude",
+            "bpm": 172.3,
+            "tags": [
+                "Dance",
+                "Party",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 235,
+            "title": "Truth On The Wall",
+            "artist": "B. Ajaneesh Loknath",
+            "album": "Mangalavaaram",
+            "bpm": 117.5,
+            "tags": [
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 479,
+            "title": "Oh Isha",
+            "artist": "Armaan Malik, Chinmayi Sripada, Sricharan Pakala",
+            "album": "Major",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 178,
+            "title": "Ghallu Ghallu",
+            "artist": "Mallikarjun, S. P. Balasubrahmanyam",
+            "album": "Indra",
+            "bpm": 123.0,
+            "tags": [
+                "Classical",
+                "Dance",
+                "Devotional"
+            ]
+        },
+        {
+            "id": 262,
+            "title": "Badhulu Thochanai",
+            "artist": "Karthik, Mallikarjun",
+            "album": "Mr Perfect",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 28,
+            "title": "Hoyna",
+            "artist": "Karthik, Chitra",
+            "album": "Aata",
+            "bpm": 129.2,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 288,
+            "title": "Sahasam",
+            "artist": "Mallikarjun",
+            "album": "Okkadu",
+            "bpm": 129.2,
+            "tags": [
+                "Mass",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 352,
+            "title": "Sound of Salaar",
+            "artist": "Ravi Basrur, Yair Albeg Wein, Songs To Your Eyes",
+            "album": "Salaar Cease Fire",
+            "bpm": 117.5,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 80,
+            "title": "Bombay Theme",
+            "artist": "A. R. Rahman",
+            "album": "Bombay",
+            "bpm": 161.5,
+            "tags": [
+                "Instrumental",
+                "Nostalgic",
+                "Sad"
+            ]
+        },
+        {
+            "id": 44,
+            "title": "Zum Zumare",
+            "artist": "Kousalya",
+            "album": "Amma Nanna O Tamila Ammai",
+            "bpm": 136.0,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 507,
+            "title": "Nilaave Vaa",
+            "artist": "Ilaiyaraaja & S.P. Balasubrahmanyam",
+            "album": "Mouna Ragam",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "NightDrive",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 13,
+            "title": "Mella Mellagaa",
+            "artist": "Sid Sriram",
+            "album": "ABCD - American Born Confused Desi",
+            "bpm": 172.3,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 50,
+            "title": "O Sukumari",
+            "artist": "Shankar Mahadevan",
+            "album": "Aparichithudu",
+            "bpm": 103.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 112,
+            "title": "Red Sea",
+            "artist": "Anirudh Ravichander",
+            "album": "Devara Part 1",
+            "bpm": 89.1,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 504,
+            "title": "Oh My Darling",
+            "artist": "Manisha Eerabathini",
+            "album": "30 Weds 21",
+            "bpm": 60.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 259,
+            "title": "Moral of the Story",
+            "artist": "Ashe",
+            "album": "Moral of the Story: Chapter 1",
+            "bpm": 117.5,
+            "tags": [
+                "Chill",
+                "Heartbreak"
+            ]
+        },
+        {
+            "id": 194,
+            "title": "Interval Block",
+            "artist": "Anirudh Ravichander",
+            "album": "Jersey",
+            "bpm": 99.4,
+            "tags": [
+                "Instrumental",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 483,
+            "title": "Chuttu Chutti",
+            "artist": "S. P. Balasubrahmanyam, Harini",
+            "album": "Narasimha",
+            "bpm": 172.3,
+            "tags": [
+                "Dance",
+                "Festival",
+                "Party"
+            ]
+        },
+        {
+            "id": 269,
+            "title": "Thooriga",
+            "artist": "Karthik",
+            "album": "Navarasa",
+            "bpm": 103.4,
+            "tags": [
+                "Melody",
+                "Romantic",
+                "Travel"
+            ]
+        },
+        {
+            "id": 189,
+            "title": "My Heart",
+            "artist": "KK",
+            "album": "Jalsa",
+            "bpm": 129.2,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 87,
+            "title": "Chale Sabse Dur",
+            "artist": "Ganeshsingh Rathore",
+            "album": "Chale Sabse Dur",
+            "bpm": 117.5,
+            "tags": [
+                "Chill",
+                "Travel"
+            ]
+        },
+        {
+            "id": 424,
+            "title": "Ailasa Ailasa",
+            "artist": "Anirudh Ravichander",
+            "album": "Vanakkam Chennai",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Party"
+            ]
+        },
+        {
+            "id": 336,
+            "title": "Harima Harima",
+            "artist": "Hariharan, Sadhana Sargam, Benny Dayal, Naresh Iyer",
+            "album": "Robot",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 228,
+            "title": "7 Years",
+            "artist": "Lukas Graham",
+            "album": "Lukas Graham",
+            "bpm": 117.5,
+            "tags": [
+                "Nostalgic",
+                "Sad"
+            ]
+        },
+        {
+            "id": 450,
+            "title": "this is what winter feels like",
+            "artist": "JVKE",
+            "album": "this is what winter feels like",
+            "bpm": 117.5,
+            "tags": [
+                "Chill",
+                "NightDrive"
+            ]
+        },
+        {
+            "id": 142,
+            "title": "Nanne Nanne",
+            "artist": "Tippu, Shalini Singh",
+            "album": "Gharshana",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 53,
+            "title": "Anaganaganaga",
+            "artist": "Armaan Malik",
+            "album": "Aravindha Sametha",
+            "bpm": 103.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 129,
+            "title": "Konchem Konchem",
+            "artist": "M.M. Keeravani, Vijay Prakash, Deepu, Revanth",
+            "album": "Eega",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Sahachari",
+            "artist": "Nobin Paul, Sai Veda Vagdevi, Battu Vijay Kumar, Poorna Chary, Nagarjun Sharma, Anirudh Shandilya Maramraju, Saiesh Poi Panandikar, Alexis D'Souza",
+            "album": "777 Charlie (Telugu)",
+            "bpm": 107.7,
+            "tags": [
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 72,
+            "title": "Ala Barfi",
+            "artist": "Pritam, Mohit Chauhan",
+            "album": "Barfi!",
+            "bpm": 129.2,
+            "tags": [
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 320,
+            "title": "Punnagai Mannan - Theme Music",
+            "artist": "Ilaiyaraaja",
+            "album": "Punnagai Mannan",
+            "bpm": 123.0,
+            "tags": [
+                "Instrumental",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 440,
+            "title": "Once Upon a Time",
+            "artist": "Anirudh Ravichander",
+            "album": "Vikram",
+            "bpm": 123.0,
+            "tags": [
+                "Mass",
+                "NightDrive"
+            ]
+        },
+        {
+            "id": 159,
+            "title": "Idhe Idhe",
+            "artist": "Hesham Abdul Wahab",
+            "album": "Hi Nanna",
+            "bpm": 172.3,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Sad"
+            ]
+        },
+        {
+            "id": 488,
+            "title": "Anaganaga Kadala",
+            "artist": "Karthik, Sumangali",
+            "album": "Venky",
+            "bpm": 83.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 371,
+            "title": "Mona Mona",
+            "artist": "Hari Haran",
+            "album": "Shivamani",
+            "bpm": 95.7,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 63,
+            "title": "Chiru Chiru",
+            "artist": "Yuvan Shankar Raja, Haricharan, Sagar Desai, Chandra Bose",
+            "album": "Awaara",
+            "bpm": 123.0,
+            "tags": [
+                "Melody",
+                "Romantic",
+                "Travel"
+            ]
+        },
+        {
+            "id": 180,
+            "title": "Face Off (Theme)",
+            "artist": "Harris Jayaraj",
+            "album": "Inkokkadu",
+            "bpm": 143.6,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 122,
+            "title": "Poovai Poovai",
+            "artist": "Ramya N.S, Naveen Mahadev",
+            "album": "Dookudu",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 171,
+            "title": "I Think They Call This Love",
+            "artist": "Elliot James Reay",
+            "album": "I Think They Call This Love",
+            "bpm": 103.4,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 157,
+            "title": "Anaganaga Oka Uru",
+            "artist": "Sri Dhruthi",
+            "album": "Hello!",
+            "bpm": 161.5,
+            "tags": [
+                "Melody",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Endukanta Joda",
+            "artist": "Naresh Iyer",
+            "album": "7th Sense",
+            "bpm": 107.7,
+            "tags": [
+                "Dance",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 391,
+            "title": "Chinnaga Chinnaga",
+            "artist": "Hari Haran, Chitra",
+            "album": "Tagore",
+            "bpm": 107.7,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 213,
+            "title": "Sumagandhaala",
+            "artist": "Karthik",
+            "album": "Kerintha",
+            "bpm": 89.1,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 46,
+            "title": "Abbo Neeyamma",
+            "artist": "S. P. Balasubrahmanyam, Kalpana",
+            "album": "Anji",
+            "bpm": 112.3,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 478,
+            "title": "Oohalu Oorege Gaalanthaa",
+            "artist": "Haricharan, Keerthana",
+            "album": "Sammohanam",
+            "bpm": 161.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 20,
+            "title": "Emaindhi Eevela",
+            "artist": "Udit Narayan",
+            "album": "Aadavari Matalaku Ardhalu Veruley",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 305,
+            "title": "Peddi First Shot",
+            "artist": "Rakshita Suresh, Deepthi Suresh",
+            "album": "Peddi",
+            "bpm": 136.0,
+            "tags": [
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 374,
+            "title": "Inthandham",
+            "artist": "S.P. Charan, Krishna Kanth",
+            "album": "Sita Ramam",
+            "bpm": 99.4,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 472,
+            "title": "Marandhu Poche",
+            "artist": "Sean Roldan, Adithya RK, Madhan",
+            "album": "With Love",
+            "bpm": 95.7,
+            "tags": [
+                "Heartbreak",
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 466,
+            "title": "Aasa Kooda",
+            "artist": "Sai Abhyankkar and Sai Smriti",
+            "album": "Aasa Kooda",
+            "bpm": 99.4,
+            "tags": [
+                "Dance",
+                "Party",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 470,
+            "title": "Endhayya Saami",
+            "artist": "Ajay Atul, Shweta Mohan, Ajay Gogavale, Ramajogayya Sastry",
+            "album": "Ranabaali",
+            "bpm": 136.0,
+            "tags": [
+                "Devotional",
+                "Festival",
+                "Folk"
+            ]
+        },
+        {
+            "id": 223,
+            "title": "Bloody Sweet",
+            "artist": "Anirudh Ravichander, Siddharth Basrur, Heisenberg",
+            "album": "Leo",
+            "bpm": 123.0,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 290,
+            "title": "Anuvanuvuu",
+            "artist": "Sunny M.R., Arjith Singh",
+            "album": "Om Bheem Bush",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 502,
+            "title": "Dosti",
+            "artist": "M. M. Keeravani, Vedala Hemachandra",
+            "album": "RRR",
+            "bpm": 152.0,
+            "tags": [
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 58,
+            "title": "Call of Silence x Zero Eclipse",
+            "artist": "Samuel Kim",
+            "album": "Attack on Titan: Epic Collection",
+            "bpm": 129.2,
+            "tags": [
+                "Instrumental",
+                "Workout"
+            ]
+        },
+        {
+            "id": 173,
+            "title": "Sasivadane",
+            "artist": "P. Unnikrishnan",
+            "album": "Iddaru",
+            "bpm": 86.1,
+            "tags": [
+                "Classical",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 318,
+            "title": "O Cheliya",
+            "artist": "P. Unnikrishnan",
+            "album": "Premikudu",
+            "bpm": 129.2,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 11,
+            "title": "96 (Theme)",
+            "artist": "Govind Vasantha, Chinmayi",
+            "album": "96",
+            "bpm": 136.0,
+            "tags": [
+                "Instrumental",
+                "Longing",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 493,
+            "title": "Arerey Manasa",
+            "artist": "Vivek Sagar, Sid Sriram, Kittu Vissapragada",
+            "album": "Falaknuma Das",
+            "bpm": 95.7,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 294,
+            "title": "Can You Hear The Music",
+            "artist": "Ludwig Göransson",
+            "album": "Oppenheimer",
+            "bpm": 89.1,
+            "tags": [
+                "Focus",
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 229,
+            "title": "Nenjame Nenjame",
+            "artist": "A.R. Rahman, Vijay Yesudas, Shakthisree Gopalan",
+            "album": "Maamannan",
+            "bpm": 112.3,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 195,
+            "title": "Train Station Scene",
+            "artist": "Anirudh Ravichander",
+            "album": "Jersey",
+            "bpm": 89.1,
+            "tags": [
+                "Instrumental",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 181,
+            "title": "Day One (Interstellar Theme)",
+            "artist": "Hans Zimmer",
+            "album": "Interstellar [Expanded Edition]",
+            "bpm": 95.7,
+            "tags": [
+                "Focus",
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 88,
+            "title": "Pularikalo",
+            "artist": "Gopi Sundar, Shakthishree Gopalan, Mohammed Maqbool Mansoor, Rafeeq Ahammed",
+            "album": "Charlie",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 390,
+            "title": "Vanochhenante",
+            "artist": "Udit Narayan, Shreya Ghoshal",
+            "album": "Tagore",
+            "bpm": 73.8,
+            "tags": [
+                "Melody",
+                "Rain",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 359,
+            "title": "Vulikithe Vudhyamam",
+            "artist": "Sid Sriram, Srinidhi Venkatesh",
+            "album": "Sarkar (Telugu)",
+            "bpm": 78.3,
+            "tags": [
+                "Motivational"
+            ]
+        },
+        {
+            "id": 353,
+            "title": "Wrath of Salaar",
+            "artist": "Ravi Basrur",
+            "album": "Salaar Cease Fire",
+            "bpm": 69.8,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 388,
+            "title": "Kholo Kholo",
+            "artist": "Raman Mahadevan",
+            "album": "Taare Zameen Par",
+            "bpm": 172.3,
+            "tags": [
+                "Motivational"
+            ]
+        },
+        {
+            "id": 89,
+            "title": "Puthumazhayai",
+            "artist": "Gopi Sundar, Shreya Ghoshal, Rafeeq Ahammed",
+            "album": "Charlie",
+            "bpm": 161.5,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Rain"
+            ]
+        },
+        {
+            "id": 270,
+            "title": "Thaazhvaram",
+            "artist": "Rex Vijayan, Sushin Shyam",
+            "album": "Neelakasham Pachakadal Chuvanna Bhoomi",
+            "bpm": 161.5,
+            "tags": [
+                "Chill",
+                "Travel"
+            ]
+        },
+        {
+            "id": 365,
+            "title": "Chaila Chaila",
+            "artist": "Chiranjeevi, K.K",
+            "album": "Shankerdada M B B S",
+            "bpm": 99.4,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 387,
+            "title": "Sweet Dreams (Are Made of This)",
+            "artist": "Eurythmics",
+            "album": "Sweet Dreams (Are Made Of This)",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Party",
+                "Workout"
+            ]
+        },
+        {
+            "id": 141,
+            "title": "Bangaru Kodi Petta",
+            "artist": "S. P. Balasubrahmanyam, Chitra",
+            "album": "Gharana Mugudu",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 392,
+            "title": "Manmadha",
+            "artist": "Mallikarjun, Maha Lakshmi",
+            "album": "Tagore",
+            "bpm": 172.3,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 471,
+            "title": "Gira Gira Gingiraagirey",
+            "artist": "Ram Miriyala",
+            "album": "Champion",
+            "bpm": 89.1,
+            "tags": [
+                "Dance",
+                "Folk"
+            ]
+        },
+        {
+            "id": 68,
+            "title": "Jaalakaari",
+            "artist": "Sublahshini, Vinayak Sasikumar",
+            "album": "Balti",
+            "bpm": 172.3,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 127,
+            "title": "Aagi Aagi",
+            "artist": "Anurag Kulkarni, Manisha Eerabathini",
+            "album": "Ee Nagaraniki Emaindi",
+            "bpm": 136.0,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 240,
+            "title": "Nenu Nenuga",
+            "artist": "S. P. Charan",
+            "album": "Manmadhudu",
+            "bpm": 161.5,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 115,
+            "title": "Choosa Choosa",
+            "artist": "Padmalatha, Sniggy",
+            "album": "Dhruva",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 23,
+            "title": "Kaatuka Kanule",
+            "artist": "G.V. Prakash Kumar, Dhee, Bhaskarbhatla Ravikumar",
+            "album": "Aakaasam Nee Haddhu Ra",
+            "bpm": 161.5,
+            "tags": [
+                "Folk",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 443,
+            "title": "When life gives you lemons",
+            "artist": "Haniya Nafisa",
+            "album": "When life gives you lemons",
+            "bpm": 123.0,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 480,
+            "title": "Ghal Ghal",
+            "artist": "S. P. Balasubrahmanyam",
+            "album": "Nuvvostanante Nenoddantana",
+            "bpm": 136.0,
+            "tags": [
+                "Melody",
+                "Rain",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 126,
+            "title": "Oorum Blood",
+            "artist": "Sai Abhyankkar, Paal Dabba, Bebhumika, Deepthi Suresh",
+            "album": "Dude",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Party"
+            ]
+        },
+        {
+            "id": 128,
+            "title": "Ne Ne Nani Ne",
+            "artist": "M.M. Keeravani, Deepu, G.Sahithi",
+            "album": "Eega",
+            "bpm": 161.5,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 302,
+            "title": "Veyira Cheyyi Veyira",
+            "artist": "Saloni",
+            "album": "Panjaa",
+            "bpm": 112.3,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 21,
+            "title": "Naa Manasuki",
+            "artist": "Karthik, Gayatri",
+            "album": "Aadavari Matalaku Ardhalu Veruley",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 436,
+            "title": "Marriage At 2AM (Background Score)",
+            "artist": "Anirudh Ravichander",
+            "album": "Vikram",
+            "bpm": 117.5,
+            "tags": [
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 16,
+            "title": "Kiliye",
+            "artist": "Dhibu Ninan Thomas, K. S. Harisankar, Anila Rajeev",
+            "album": "ARM",
+            "bpm": 89.1,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 319,
+            "title": "Prema Ane",
+            "artist": "S. P. Balasubrahmanyam, Swarnalatha",
+            "album": "Premikula Roju",
+            "bpm": 99.4,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 278,
+            "title": "Once Upon A Time Lo",
+            "artist": "Dr. Arun Gopan",
+            "album": "Ninnu Kori",
+            "bpm": 129.2,
+            "tags": [
+                "Heartbreak",
+                "Party"
+            ]
+        },
+        {
+            "id": 43,
+            "title": "Lunchkostava",
+            "artist": "Chakri, Kousalya",
+            "album": "Amma Nanna O Tamila Ammai",
+            "bpm": 73.8,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 257,
+            "title": "Idhedho Bagundhe",
+            "artist": "Vijay Prakash, Anitha",
+            "album": "Mirchi",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 203,
+            "title": "Kaathadi",
+            "artist": "Anand Kashinath, Sublahshini",
+            "album": "Kaathadi",
+            "bpm": 136.0,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 361,
+            "title": "Top Tucker",
+            "artist": "Mohit Chauhan",
+            "album": "Sarkar (Telugu)",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 166,
+            "title": "Maahi Ve",
+            "artist": "A. R. Rahman",
+            "album": "Highway",
+            "bpm": 66.3,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 282,
+            "title": "New York Nagarama",
+            "artist": "A. R. Rahman",
+            "album": "Nuvvu Nenu Prema",
+            "bpm": 129.2,
+            "tags": [
+                "Longing",
+                "Melody",
+                "NightDrive"
+            ]
+        },
+        {
+            "id": 438,
+            "title": "Amar Theme (Background Score)",
+            "artist": "Anirudh Ravichander",
+            "album": "Vikram",
+            "bpm": 136.0,
+            "tags": [
+                "Instrumental",
+                "NightDrive"
+            ]
+        },
+        {
+            "id": 34,
+            "title": "Chandrakala",
+            "artist": "Hari Haran, Rita",
+            "album": "Adhurs",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 407,
+            "title": "Thirinjin",
+            "artist": "Haniya Nafisa",
+            "album": "Thirinjin",
+            "bpm": 143.6,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 118,
+            "title": "Die With A Smile",
+            "artist": "Lady Gaga, Bruno Mars",
+            "album": "Die With A Smile",
+            "bpm": 161.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 55,
+            "title": "Pillagali",
+            "artist": "Shreya Ghoshal",
+            "album": "Athadu",
+            "bpm": 136.0,
+            "tags": [
+                "Festival",
+                "Melody"
+            ]
+        },
+        {
+            "id": 266,
+            "title": "Nandemonaiya",
+            "artist": "Aleebi",
+            "album": "Nandemonaiya",
+            "bpm": 83.4,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 372,
+            "title": "Sirivennela",
+            "artist": "Anurag kulkarni",
+            "album": "Shyam Singha Roy",
+            "bpm": 112.3,
+            "tags": [
+                "Classical",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 448,
+            "title": "illaathath",
+            "artist": "Haniya Nafisa",
+            "album": "illaathath",
+            "bpm": 136.0,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 121,
+            "title": "Guruvaram",
+            "artist": "Rahul Nambiar",
+            "album": "Dookudu",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 241,
+            "title": "Gundello Emundho",
+            "artist": "Venu",
+            "album": "Manmadhudu",
+            "bpm": 92.3,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Sad"
+            ]
+        },
+        {
+            "id": 446,
+            "title": "blue",
+            "artist": "Yung Kai",
+            "album": "blue",
+            "bpm": 99.4,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 70,
+            "title": "Thumbi Penne",
+            "artist": "Gopi Sundar, Siddharth Menon, Santhosh Varma",
+            "album": "Bangalore Days",
+            "bpm": 99.4,
+            "tags": [
+                "Dance",
+                "Festival",
+                "Folk"
+            ]
+        },
+        {
+            "id": 426,
+            "title": "Nuvvasthanante",
+            "artist": "Raqueeb Alam, K.S. Chithra",
+            "album": "Varsham",
+            "bpm": 129.2,
+            "tags": [
+                "Melody",
+                "Rain",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 454,
+            "title": "Maa Telugu Thalli",
+            "artist": "Late. Sri Tangutoori Suryakumari",
+            "album": "Leader",
+            "bpm": 99.4,
+            "tags": [
+                "Devotional",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 449,
+            "title": "nadaaniyan",
+            "artist": "Akshath",
+            "album": "nadaaniyan",
+            "bpm": 92.3,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 47,
+            "title": "Manthaara Kaatre",
+            "artist": "Neha Nair, Yakzan Gary Pereira, Rafeeq Ahammed",
+            "album": "Anju Sundarikal",
+            "bpm": 95.7,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 153,
+            "title": "Priya Raagale",
+            "artist": "S. P. Balasubrahmanyam, Chitra",
+            "album": "Hello Brother",
+            "bpm": 89.1,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 313,
+            "title": "Chalo Hyderabad",
+            "artist": "Vishnu Vijay",
+            "album": "Premalu",
+            "bpm": 112.3,
+            "tags": [
+                "Chill",
+                "Travel"
+            ]
+        },
+        {
+            "id": 338,
+            "title": "Neelo Valapu",
+            "artist": "Vijay Prakash, Shreya Ghosal",
+            "album": "Robot",
+            "bpm": 103.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 356,
+            "title": "Rise Of Shouryangas",
+            "artist": "Ravi Basrur",
+            "album": "Salaar Cease Fire",
+            "bpm": 112.3,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 161,
+            "title": "Needhe Needhe",
+            "artist": "Aavani Malhar",
+            "album": "Hi Nanna",
+            "bpm": 99.4,
+            "tags": [
+                "Melody",
+                "Sad"
+            ]
+        },
+        {
+            "id": 460,
+            "title": "Chiri Thottu",
+            "artist": "Justin Prabhakaran, Chinmayi Sripada and Manu Manjith",
+            "album": "Sarvam Maya",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 207,
+            "title": "Theme Of Kalki",
+            "artist": "Santhosh Narayanan",
+            "album": "Kalki 2898 AD",
+            "bpm": 152.0,
+            "tags": [
+                "Devotional",
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 410,
+            "title": "Ninnila",
+            "artist": "Armaan Malik",
+            "album": "Tholi Prema",
+            "bpm": 129.2,
+            "tags": [
+                "Melody",
+                "Romantic",
+                "Travel"
+            ]
+        },
+        {
+            "id": 301,
+            "title": "Padi Padi Leche",
+            "artist": "Armaan Malik, Sinduri Vishal",
+            "album": "Padi Padi Leche Manasu",
+            "bpm": 152.0,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Laalijo",
+            "artist": "A. R. Rahman",
+            "album": "24 (Telugu)",
+            "bpm": 95.7,
+            "tags": [
+                "Melody",
+                "Sleep"
+            ]
+        },
+        {
+            "id": 325,
+            "title": "Komma Uyyala",
+            "artist": "Prakruthi Reddy",
+            "album": "RRR",
+            "bpm": 161.5,
+            "tags": [
+                "Folk",
+                "Melody",
+                "Sleep"
+            ]
+        },
+        {
+            "id": 385,
+            "title": "Suzume",
+            "artist": "Radwimps",
+            "album": "Suzume",
+            "bpm": 152.0,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 15,
+            "title": "Angu Vaana Konilu",
+            "artist": "Dhibu Ninan Thomas, Vaikom Vijayalakshmi, Manu Manjith",
+            "album": "ARM",
+            "bpm": 123.0,
+            "tags": [
+                "Folk",
+                "Melody"
+            ]
+        },
+        {
+            "id": 74,
+            "title": "Apna Bana Le",
+            "artist": "Sachin-Jigar, Sakshi Holkar",
+            "album": "Bhediya",
+            "bpm": 95.7,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 158,
+            "title": "Adigaa",
+            "artist": "Karthik, Ayshath Safa",
+            "album": "Hi Nanna",
+            "bpm": 92.3,
+            "tags": [
+                "Heartbreak",
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 165,
+            "title": "Ammaadi",
+            "artist": "Shakthisree Gopalan, Kaala Bhairava",
+            "album": "Hi Nanna",
+            "bpm": 86.1,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 333,
+            "title": "The Love Bug Has Bitten",
+            "artist": "Anirudh Ravichander",
+            "album": "Remo",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 91,
+            "title": "Agni Skalana",
+            "artist": "MM Keeravaani, Mathangi",
+            "album": "Chatrapathi",
+            "bpm": 184.6,
+            "tags": [
+                "Mass",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 433,
+            "title": "Kaattumalli",
+            "artist": "Ilaiyaraaja, Ananya Bhat",
+            "album": "Viduthalai",
+            "bpm": 107.7,
+            "tags": [
+                "Folk",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 465,
+            "title": "Puthu Mazha",
+            "artist": "Shakthisree Gopalan",
+            "album": "Sarvam Maya",
+            "bpm": 92.3,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Rain"
+            ]
+        },
+        {
+            "id": 349,
+            "title": "Pachchadanamey",
+            "artist": "Hariharan, Clinton",
+            "album": "Sakhi",
+            "bpm": 89.1,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 96,
+            "title": "Maimarupaa",
+            "artist": "A.R. Rahman, Shashaa Tirupati",
+            "album": "Cheliyaa",
+            "bpm": 152.0,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 57,
+            "title": "Pavizha Mazha",
+            "artist": "K S Harishankar",
+            "album": "Athiran",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Rain",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 486,
+            "title": "Idhera",
+            "artist": "Mohith Chauhan, Radhan",
+            "album": "Yevade Subramanyam",
+            "bpm": 86.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 341,
+            "title": "Kun Faya Kun",
+            "artist": "A. R. Rahman, Javed Ali, Mohit Chauhan",
+            "album": "Rockstar",
+            "bpm": 89.1,
+            "tags": [
+                "Devotional",
+                "Melody"
+            ]
+        },
+        {
+            "id": 487,
+            "title": "Nijam Idhe Kadaa",
+            "artist": "Sid Sriram",
+            "album": "Raja Raja Chora",
+            "bpm": 112.3,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 48,
+            "title": "Entha Chithram",
+            "artist": "Anurag Kulkarni",
+            "album": "Ante Sundaraniki",
+            "bpm": 152.0,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 444,
+            "title": "Lag Ja Gale Se Phir",
+            "artist": "Lata Mangeshkar",
+            "album": "Woh Kaun Thi",
+            "bpm": 129.2,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 24,
+            "title": "Nilaavil Ellaame",
+            "artist": "Sachin Warrier",
+            "album": "Aanandam",
+            "bpm": 99.4,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 434,
+            "title": "Vladimir's Theme",
+            "artist": "Dean Valentine",
+            "album": "Viking",
+            "bpm": 161.5,
+            "tags": [
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 418,
+            "title": "Ningi Chutte",
+            "artist": "Vijay Yesudas",
+            "album": "Uma Maheswara Ugra Roopasya",
+            "bpm": 172.3,
+            "tags": [
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 317,
+            "title": "Evare",
+            "artist": "Vijay Yesudas",
+            "album": "Premam",
+            "bpm": 161.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 204,
+            "title": "Nenjukkule",
+            "artist": "Shakthisree Gopalan, Vairamuthu, A.R. Rahman",
+            "album": "Kadal",
+            "bpm": 152.0,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 71,
+            "title": "Ente Kannil Ninakkaai",
+            "artist": "Gopi Sundar, Nazriya Nazim, Santhosh Varma",
+            "album": "Bangalore Days",
+            "bpm": 136.0,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 510,
+            "title": "Saagara Shayana Vibho (A Prelude)",
+            "artist": "Agam",
+            "album": "Saagara Shayana Vibho (A Prelude)",
+            "bpm": 136.0,
+            "tags": [
+                "Classical",
+                "Devotional",
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 263,
+            "title": "Mulchedi",
+            "artist": "Haniya Nafisa",
+            "album": "Mulchedi",
+            "bpm": 136.0,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 499,
+            "title": "Padavi Datani",
+            "artist": "Sunitha, Ramana Gogula",
+            "album": "Thammudu",
+            "bpm": 143.6,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 236,
+            "title": "Ritha Dhamava",
+            "artist": "Sruthi Lakshmee, Joel Johns",
+            "album": "Mangalyam Thanthunanena",
+            "bpm": 117.5,
+            "tags": [
+                "Devotional",
+                "Festival"
+            ]
+        },
+        {
+            "id": 131,
+            "title": "F1",
+            "artist": "Hans Zimmer",
+            "album": "F1 The Movie",
+            "bpm": 112.3,
+            "tags": [
+                "Instrumental",
+                "Workout"
+            ]
+        },
+        {
+            "id": 298,
+            "title": "Avunanavaa",
+            "artist": "Leon James, Sid Sriram",
+            "album": "Ori Devuda",
+            "bpm": 143.6,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 476,
+            "title": "Na Cheli Rojave",
+            "artist": "S. P. Balasubrahmanyam, Sujatha",
+            "album": "Roja",
+            "bpm": 92.3,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 431,
+            "title": "Battery Theme",
+            "artist": "Anirudh Ravichander",
+            "album": "Vettaiyan",
+            "bpm": 123.0,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 145,
+            "title": "Gul",
+            "artist": "Anuv Jain",
+            "album": "Gul",
+            "bpm": 86.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 69,
+            "title": "Inte Inthinte",
+            "artist": "KK",
+            "album": "Balu",
+            "bpm": 123.0,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 103,
+            "title": "Ramma Chilakamma",
+            "artist": "Udit Narayan",
+            "album": "Choodalani Undi",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 41,
+            "title": "Neeve Neeve",
+            "artist": "Chakri",
+            "album": "Amma Nanna O Tamila Ammai",
+            "bpm": 99.4,
+            "tags": [
+                "Heartbreak",
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 56,
+            "title": "Pilichina",
+            "artist": "Karthik, Kavitha Subramanyam",
+            "album": "Athadu",
+            "bpm": 99.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 170,
+            "title": "Husn",
+            "artist": "Anuv Jain",
+            "album": "Husn",
+            "bpm": 152.0,
+            "tags": [
+                "Heartbreak",
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Bonding Song",
+            "artist": "Nobin Paul",
+            "album": "777 Charlie (Telugu)",
+            "bpm": 99.4,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 238,
+            "title": "Nebulakal - Travel Song",
+            "artist": "Sushin Shyam, Pradeep Kumar, Anwar Ali",
+            "album": "Manjummel Boys",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 447,
+            "title": "her",
+            "artist": "JVKE",
+            "album": "her",
+            "bpm": 143.6,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 348,
+            "title": "Sahiba",
+            "artist": "Aditya Rikhari",
+            "album": "Sahiba",
+            "bpm": 99.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 209,
+            "title": "Veera Dheera",
+            "artist": "Santhosh Narayanan",
+            "album": "Kalki 2898 AD",
+            "bpm": 89.1,
+            "tags": [
+                "Devotional",
+                "Mass"
+            ]
+        },
+        {
+            "id": 222,
+            "title": "Sajni",
+            "artist": "Arijit Singh",
+            "album": "Laapataa Ladies",
+            "bpm": 161.5,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 321,
+            "title": "Final Battle",
+            "artist": "Devi Sri Prasad",
+            "album": "Pushpa 2 The Rule",
+            "bpm": 86.1,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 354,
+            "title": "Salaar The Shourayanga",
+            "artist": "Ravi Basrur",
+            "album": "Salaar Cease Fire",
+            "bpm": 152.0,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 355,
+            "title": "Varadha Raja Mannar vs Salaar",
+            "artist": "Ravi Basrur",
+            "album": "Salaar Cease Fire",
+            "bpm": 143.6,
+            "tags": [
+                "Instrumental",
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 61,
+            "title": "Nee Yadalo Naaku",
+            "artist": "Yuvan Shankar Raja, Sagar Desai, Vennelakanti",
+            "album": "Awaara",
+            "bpm": 103.4,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 506,
+            "title": "Karukara",
+            "artist": "Avial",
+            "album": "Avial",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Folk"
+            ]
+        },
+        {
+            "id": 25,
+            "title": "Nuvvunte",
+            "artist": "Sagar",
+            "album": "Aarya",
+            "bpm": 129.2,
+            "tags": [
+                "Heartbreak",
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 33,
+            "title": "Urugudhu Urugudhu",
+            "artist": "Kapil Kapilan, Shreya Ghoshal, Thamarai",
+            "album": "Ace",
+            "bpm": 69.8,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 42,
+            "title": "Chennai Chandrama",
+            "artist": "Chakri",
+            "album": "Amma Nanna O Tamila Ammai",
+            "bpm": 107.7,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 481,
+            "title": "Adirey Adirey",
+            "artist": "Jessi Gift, Kalpana",
+            "album": "Nuvvostanante Nenoddantana",
+            "bpm": 103.4,
+            "tags": [
+                "Dance",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 37,
+            "title": "Ollulleru",
+            "artist": "Justin Varghese, Mavila Community, Praseetha Chalakudy",
+            "album": "Ajagajantharam",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Festival",
+                "Folk"
+            ]
+        },
+        {
+            "id": 162,
+            "title": "Gaaju Bomma",
+            "artist": "Hesham Abdul Wahab",
+            "album": "Hi Nanna",
+            "bpm": 161.5,
+            "tags": [
+                "Melody",
+                "Sad"
+            ]
+        },
+        {
+            "id": 495,
+            "title": "Chilaka Pacha Koka",
+            "artist": "Mano, Radhika",
+            "album": "Narasimha Naidu",
+            "bpm": 76.0,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 370,
+            "title": "Rama Rama",
+            "artist": "Kousalya",
+            "album": "Shivamani",
+            "bpm": 172.3,
+            "tags": [
+                "Dance",
+                "Mass"
+            ]
+        },
+        {
+            "id": 253,
+            "title": "Poopol Poopol (Instrumental)",
+            "artist": "Tippu, Karthik",
+            "album": "Minnalae",
+            "bpm": 136.0,
+            "tags": [
+                "Instrumental",
+                "Melody"
+            ]
+        },
+        {
+            "id": 193,
+            "title": "Needa Padadhani",
+            "artist": "Darshan Raval",
+            "album": "Jersey",
+            "bpm": 123.0,
+            "tags": [
+                "Melody",
+                "Motivational",
+                "Sad"
+            ]
+        },
+        {
+            "id": 284,
+            "title": "Cheppave Chirugali",
+            "artist": "Udit Narayan, Sujatha",
+            "album": "Okkadu",
+            "bpm": 161.5,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 475,
+            "title": "My Name Is Billa",
+            "artist": "Ranjith, Naveen",
+            "album": "Billa",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Mass"
+            ]
+        },
+        {
+            "id": 188,
+            "title": "Jailer Theme (Instrumental)",
+            "artist": "Anirudh Ravichander",
+            "album": "Jailer",
+            "bpm": 152.0,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 185,
+            "title": "Priyatama",
+            "artist": "S. P. Balasubrahmanyam, S. Janaki",
+            "album": "Jagadekaveerudu Athiloka Sundari",
+            "bpm": 123.0,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 231,
+            "title": "Nuvvani Idhi Needani",
+            "artist": "Karthik",
+            "album": "Maharshi",
+            "bpm": 99.4,
+            "tags": [
+                "Melody",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 81,
+            "title": "Kannanule",
+            "artist": "K. S. Chithra",
+            "album": "Bombay",
+            "bpm": 63.0,
+            "tags": [
+                "Classical",
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 408,
+            "title": "Toliprema",
+            "artist": "Kaala Bhairava",
+            "album": "Tholi Prema",
+            "bpm": 83.4,
+            "tags": [
+                "Heartbreak",
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 90,
+            "title": "A Vachi B Pai",
+            "artist": "MM Keeravaani, Mathangi",
+            "album": "Chatrapathi",
+            "bpm": 112.3,
+            "tags": [
+                "Dance",
+                "Mass"
+            ]
+        },
+        {
+            "id": 350,
+            "title": "Sooreede",
+            "artist": "Harini Ivaturi",
+            "album": "Salaar Cease Fire",
+            "bpm": 136.0,
+            "tags": [
+                "Melody",
+                "Sad"
+            ]
+        },
+        {
+            "id": 276,
+            "title": "Ninnu Kori",
+            "artist": "Dr. Arun Gopan",
+            "album": "Ninnu Kori",
+            "bpm": 123.0,
+            "tags": [
+                "Classical",
+                "Melody"
+            ]
+        },
+        {
+            "id": 152,
+            "title": "Heeriye",
+            "artist": "Jasleen Royal, Arijit Singh",
+            "album": "Heeriye",
+            "bpm": 103.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 84,
+            "title": "The Age Of Madness",
+            "artist": "Christo Xavier, Sayanth S",
+            "album": "Bramayugam",
+            "bpm": 143.6,
+            "tags": [
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 425,
+            "title": "Neeti Mullai (Bit)",
+            "artist": "Sagar, Sumangali",
+            "album": "Varsham",
+            "bpm": 103.4,
+            "tags": [
+                "Heartbreak",
+                "Rain",
+                "Sad"
+            ]
+        },
+        {
+            "id": 307,
+            "title": "Pirates of the Caribbean",
+            "artist": "Jean Luc Marie",
+            "album": "Pirates of the Caribbean",
+            "bpm": 76.0,
+            "tags": [
+                "Instrumental"
+            ]
+        },
+        {
+            "id": 286,
+            "title": "Nuvvem Maya",
+            "artist": "Shreya Ghoshal",
+            "album": "Okkadu",
+            "bpm": 123.0,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 246,
+            "title": "Natho Vasthava",
+            "artist": "Udit Narayan, Sumangali",
+            "album": "Mass",
+            "bpm": 89.1,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 505,
+            "title": "残酷な天使のテーゼ",
+            "artist": "Yoko Takahash",
+            "album": "Zankoku na Tenshi no Thesis",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 230,
+            "title": "Jorse Jorse",
+            "artist": "Daler Mehandi, Geetha Madhuri",
+            "album": "Magadheera",
+            "bpm": 172.3,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Party"
+            ]
+        },
+        {
+            "id": 45,
+            "title": "Kodi Koora",
+            "artist": "Jessi Gift, Malathi",
+            "album": "Andarivaadu",
+            "bpm": 103.4,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 451,
+            "title": "GlobeTrotter",
+            "artist": "M.M. Keeravaani, Shruti Haasan, Kaala Bhairava, Chaitanya Prasad",
+            "album": "Varanasi",
+            "bpm": 117.5,
+            "tags": [
+                "Motivational",
+                "Travel"
+            ]
+        },
+        {
+            "id": 463,
+            "title": "Papaoutai",
+            "artist": "mikeeysmind, Chill77 and Unjaps",
+            "album": "Papaoutai",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 114,
+            "title": "Dhruva Dhruva",
+            "artist": "Amit Mishra",
+            "album": "Dhruva",
+            "bpm": 161.5,
+            "tags": [
+                "Mass",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 419,
+            "title": "Unakkul Naane",
+            "artist": "Pritt, Dilushselva",
+            "album": "Unakkul Naane",
+            "bpm": 107.7,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 328,
+            "title": "Raja Vaaru Rani Gaaru Title Song",
+            "artist": "Jay Krish",
+            "album": "Raja Vaaru Rani Gaaru",
+            "bpm": 103.4,
+            "tags": [
+                "Folk",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 376,
+            "title": "Poove Sem Poove (Male)",
+            "artist": "Ilaiyaraaja, K. J. Yesudas",
+            "album": "Solla Thudikuthu Manasu",
+            "bpm": 136.0,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 107,
+            "title": "Neeve",
+            "artist": "G.V.Prakash Kumar",
+            "album": "Darling",
+            "bpm": 129.2,
+            "tags": [
+                "Heartbreak",
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 428,
+            "title": "Ammo Ammayena (Bit)",
+            "artist": "Hari Haran",
+            "album": "Vasantham",
+            "bpm": 152.0,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 309,
+            "title": "Bharata Vedamuga",
+            "artist": "K. S. Chithra",
+            "album": "Pournamy",
+            "bpm": 112.3,
+            "tags": [
+                "Classical",
+                "Dance",
+                "Devotional"
+            ]
+        },
+        {
+            "id": 339,
+            "title": "O Maramanishi",
+            "artist": "S. P. Balasubrahmanyam, Srinivas D., Khatija Rahman",
+            "album": "Robot",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Sad"
+            ]
+        },
+        {
+            "id": 12,
+            "title": "The Life of Ram",
+            "artist": "Govind Vasantha",
+            "album": "96",
+            "bpm": 83.4,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 147,
+            "title": "K For Krishna",
+            "artist": "Aju Varghese, Vinayak Sasikumar, Ankit Menon",
+            "album": "Guruvayoorambala Nadayil",
+            "bpm": 107.7,
+            "tags": [
+                "Devotional",
+                "Festival",
+                "Folk"
+            ]
+        },
+        {
+            "id": 177,
+            "title": "Dai Dai Dhamma",
+            "artist": "KK, Maha Lakshmi",
+            "album": "Indra",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 389,
+            "title": "Kodithe Kottali",
+            "artist": "Shankar Mahadevan",
+            "album": "Tagore",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 412,
+            "title": "Beat It",
+            "artist": "Michael Jackson",
+            "album": "Thriller",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Party",
+                "Workout"
+            ]
+        },
+        {
+            "id": 373,
+            "title": "Rise of Shyam",
+            "artist": "Mickey J. Meyer, Anurag Kulkarni, Vishal Dadlani, Rap-Cizzy",
+            "album": "Shyam Singha Roy",
+            "bpm": 103.4,
+            "tags": [
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Prema Swaramulalo",
+            "artist": "A. R. Rahman",
+            "album": "24 (Telugu)",
+            "bpm": 95.7,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 239,
+            "title": "Andhamyna Bhamalu",
+            "artist": "Devi Sri Prasad",
+            "album": "Manmadhudu",
+            "bpm": 143.6,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 137,
+            "title": "Kevvu Keka",
+            "artist": "Mamta Sharma, Kushi Murali",
+            "album": "Gabbar Singh",
+            "bpm": 86.1,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 494,
+            "title": "Cheliya",
+            "artist": "Jeans Srinivas, Harini",
+            "album": "Kushi",
+            "bpm": 99.4,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 18,
+            "title": "Yaa Yaa",
+            "artist": "Abhay Jodhpurkar",
+            "album": "Aa Aaa",
+            "bpm": 86.1,
+            "tags": [
+                "Festival",
+                "Folk",
+                "Melody"
+            ]
+        },
+        {
+            "id": 316,
+            "title": "Rockaankuthu",
+            "artist": "Anirudh Ravichander",
+            "album": "Premam",
+            "bpm": 83.4,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 27,
+            "title": "Aa Ante",
+            "artist": "Malathi, Ranjith",
+            "album": "Aarya",
+            "bpm": 103.4,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Mutyala Dhaarani",
+            "artist": "Karthik",
+            "album": "7th Sense",
+            "bpm": 136.0,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 245,
+            "title": "Valu Kalla Vayyari",
+            "artist": "Karthik",
+            "album": "Mass",
+            "bpm": 89.1,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 464,
+            "title": "Raavana Mavandaa",
+            "artist": "Anirudh Ravichander, Anirudh Ravichander and Vivek",
+            "album": "Jana Nayagan",
+            "bpm": 136.0,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 285,
+            "title": "Hare Rama",
+            "artist": "Shankar Mahadevan",
+            "album": "Okkadu",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Festival",
+                "Mass"
+            ]
+        },
+        {
+            "id": 187,
+            "title": "Hukum - Thalaivar Alappara",
+            "artist": "Anirudh Ravichander, Super Subu",
+            "album": "Jailer",
+            "bpm": 103.4,
+            "tags": [
+                "Mass",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 366,
+            "title": "Ye Jilla",
+            "artist": "Adnan Sami, Kalpana",
+            "album": "Shankerdada M B B S",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 154,
+            "title": "Kannepettaro Kannu Kottaro",
+            "artist": "S. P. Balasubrahmanyam, Chitra",
+            "album": "Hello Brother",
+            "bpm": 99.4,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 75,
+            "title": "Bheeshma Parvam (Teaser Theme)",
+            "artist": "Sushin Shyam, Christo Xavier",
+            "album": "Bheeshma Parvam",
+            "bpm": 86.1,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 250,
+            "title": "They Don't Care About Us (Brazil Version)",
+            "artist": "Michael Jackson",
+            "album": "Michael Jackson's This Is It",
+            "bpm": 184.6,
+            "tags": [
+                "Mass",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 109,
+            "title": "Gili Giligas",
+            "artist": "Andrea, Devan",
+            "album": "Desamudhuru",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 151,
+            "title": "Osa Osa",
+            "artist": "Jassie Gift, Suchitra",
+            "album": "Happy",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 30,
+            "title": "Odimaga",
+            "artist": "Nazriya Nazim",
+            "album": "Aavesham",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Party",
+                "Workout"
+            ]
+        },
+        {
+            "id": 292,
+            "title": "One Piece - Drums of Liberation x Overtaken (EPIC COVER) [GEAR 5]",
+            "artist": "Alexis DL",
+            "album": "One Piece",
+            "bpm": 117.5,
+            "tags": [
+                "Instrumental",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 65,
+            "title": "Dynamite",
+            "artist": "BTS",
+            "album": "BE",
+            "bpm": 112.3,
+            "tags": [
+                "Dance",
+                "Party",
+                "Workout"
+            ]
+        },
+        {
+            "id": 501,
+            "title": "Mass",
+            "artist": "Mano, Ravi Verma",
+            "album": "Mass",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 258,
+            "title": "En Iniya Pon Nilave Pon",
+            "artist": "K. J. Yesudas",
+            "album": "Moodu Pani",
+            "bpm": 152.0,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 272,
+            "title": "We Will Rock You",
+            "artist": "Queen",
+            "album": "News Of The World (Deluxe Edition 2011 Remaster)",
+            "bpm": 80.7,
+            "tags": [
+                "Mass",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 323,
+            "title": "Naatu Naatu",
+            "artist": "Rahul Sipligunj, Kaala Bhairava",
+            "album": "RRR",
+            "bpm": 161.5,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 437,
+            "title": "Pablo Sandhanam (Background Score)",
+            "artist": "Anirudh Ravichander",
+            "album": "Vikram",
+            "bpm": 143.6,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 439,
+            "title": "Wasted",
+            "artist": "Anirudh Ravichander",
+            "album": "Vikram",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "NightDrive",
+                "Party"
+            ]
+        },
+        {
+            "id": 143,
+            "title": "Naan Gaali",
+            "artist": "Sean Roldan, Mohan Rajan",
+            "album": "Good Night",
+            "bpm": 86.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 62,
+            "title": "Chuttesai Chuttesai",
+            "artist": "Karthik",
+            "album": "Awaara",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "Party",
+                "Travel"
+            ]
+        },
+        {
+            "id": 215,
+            "title": "Aha Allari",
+            "artist": "Chitra, Raqeeb Alam",
+            "album": "Khadgam",
+            "bpm": 80.7,
+            "tags": [
+                "Dance",
+                "Festival",
+                "Party"
+            ]
+        },
+        {
+            "id": 227,
+            "title": "Love Like That",
+            "artist": "Jonita Gandhi, Ali Sethi",
+            "album": "Love Like That",
+            "bpm": 161.5,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 340,
+            "title": "Boom Boom Robo Ra",
+            "artist": "Yogi B, Kirthi Sagathia, Swetha Mohan, Tanvi Shah",
+            "album": "Robot",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 508,
+            "title": "Enakenna Yaarum Illaye",
+            "artist": "Anirudh Ravichander & Vignesh Shivan",
+            "album": "Aakko",
+            "bpm": 161.5,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 108,
+            "title": "Ninne Ninne",
+            "artist": "Chakri, Kousalya",
+            "album": "Desamudhuru",
+            "bpm": 103.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 218,
+            "title": "Subhalekha",
+            "artist": "S.P.Balasubramanyam, Chitra",
+            "album": "Kondaveeti Donga",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 192,
+            "title": "Priya",
+            "artist": "Srinivas",
+            "album": "Jeans",
+            "bpm": 123.0,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 377,
+            "title": "Dhurooha Manthahasame",
+            "artist": "Christo Xavier, Ahi Ajayan, Mu.Ri",
+            "album": "Sookshmadarshini",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 38,
+            "title": "Alag Aasmaan",
+            "artist": "Anuv Jain",
+            "album": "Alag Aasmaan",
+            "bpm": 117.5,
+            "tags": [
+                "Chill",
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 191,
+            "title": "Happy Ga Jolly Ga",
+            "artist": "Sonu Nigam, Gopika Poornima",
+            "album": "Jayam Manadera",
+            "bpm": 95.7,
+            "tags": [
+                "Dance",
+                "Festival",
+                "Party"
+            ]
+        },
+        {
+            "id": 260,
+            "title": "Chali Chaliga",
+            "artist": "Shreya Ghoshal",
+            "album": "Mr Perfect",
+            "bpm": 161.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 315,
+            "title": "Welcome To Hyderabad",
+            "artist": "Shakthisree Gopalan, Kapil Kapilan, Vishnu Vijay",
+            "album": "Premalu",
+            "bpm": 73.8,
+            "tags": [
+                "Chill",
+                "Travel"
+            ]
+        },
+        {
+            "id": 119,
+            "title": "Dilbar",
+            "artist": "Tech Panda, Kenzani, Rusha, Blizza",
+            "album": "Dilbar",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "NightDrive"
+            ]
+        },
+        {
+            "id": 220,
+            "title": "Be Free",
+            "artist": "Vidya Vox",
+            "album": "Kuthu Fire",
+            "bpm": 95.7,
+            "tags": [
+                "Dance",
+                "Party",
+                "Travel"
+            ]
+        },
+        {
+            "id": 234,
+            "title": "Manavyalakinchara (Mist of Capricorn)",
+            "artist": "Agam",
+            "album": "Manavyalakinchara (Mist of Capricorn) - Single",
+            "bpm": 172.3,
+            "tags": [
+                "Classical",
+                "Devotional"
+            ]
+        },
+        {
+            "id": 78,
+            "title": "All The Stars",
+            "artist": "Kendrick Lamar, SZA",
+            "album": "Black Panther: The Album",
+            "bpm": 95.7,
+            "tags": [
+                "NightDrive",
+                "Workout"
+            ]
+        },
+        {
+            "id": 73,
+            "title": "Beparwai",
+            "artist": "Jonita Gandhi",
+            "album": "Beparwai",
+            "bpm": 99.4,
+            "tags": [
+                "Chill",
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 150,
+            "title": "Happy",
+            "artist": "Karthik",
+            "album": "Happy",
+            "bpm": 99.4,
+            "tags": [
+                "Melody",
+                "Party"
+            ]
+        },
+        {
+            "id": 415,
+            "title": "Gangstaa",
+            "artist": "Ghibran, Shabir Sulthan",
+            "album": "Thunivu",
+            "bpm": 161.5,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 277,
+            "title": "Unnatundi Gundey",
+            "artist": "Karthik",
+            "album": "Ninnu Kori",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 435,
+            "title": "Lokiverse (Background Score)",
+            "artist": "Anirudh Ravichander",
+            "album": "Vikram",
+            "bpm": 95.7,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 211,
+            "title": "Krishna Trance",
+            "artist": "Kaala Bhairava",
+            "album": "Karthikeya 2",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Devotional"
+            ]
+        },
+        {
+            "id": 35,
+            "title": "Ninnukori Varanam",
+            "artist": "Ilaiyaraaja, K. S. Chithra",
+            "album": "Agni Natchathiram",
+            "bpm": 95.7,
+            "tags": [
+                "Classical",
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 175,
+            "title": "Bham Bham Bole",
+            "artist": "Hariharan, Shankar Mahadevan",
+            "album": "Indra",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Devotional",
+                "Festival",
+                "Mass"
+            ]
+        },
+        {
+            "id": 432,
+            "title": "Pathikichu",
+            "artist": "Yogi Sekar, Amogh Balaji",
+            "album": "Vidaamuyarchi",
+            "bpm": 152.0,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 456,
+            "title": "Maname",
+            "artist": "Sarah Black",
+            "album": "Maname",
+            "bpm": 172.3,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 275,
+            "title": "See You Again (feat. Charlie Puth)",
+            "artist": "Wiz Khalifa",
+            "album": "Nine Track Mind",
+            "bpm": 161.5,
+            "tags": [
+                "Nostalgic",
+                "Sad"
+            ]
+        },
+        {
+            "id": 169,
+            "title": "Puthiyoru Lokam",
+            "artist": "Hesham Abdul Wahab, Vimal Roy, Bhadra Rajin",
+            "album": "Hridayam",
+            "bpm": 99.4,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 405,
+            "title": "Hungry Cheetah",
+            "artist": "Thaman S",
+            "album": "They Call Him OG",
+            "bpm": 95.7,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 217,
+            "title": "Kalapakkaara",
+            "artist": "Jakes Bejoy, Shreya Ghoshal, Benny Dayal, Fejo",
+            "album": "King of Kotha",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Party"
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Oh Ringa Ringa",
+            "artist": "Benny Dayal",
+            "album": "7th Sense",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 200,
+            "title": "Evvadikevvadu Banisa",
+            "artist": "Arun",
+            "album": "KGF Chapter 1 (Telugu)",
+            "bpm": 129.2,
+            "tags": [
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 1,
+            "title": "Diyalo Diyala",
+            "artist": "Priya Hemesh",
+            "album": "100% Love",
+            "bpm": 143.6,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Party"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Manasuke",
+            "artist": "A. R. Rahman",
+            "album": "24 (Telugu)",
+            "bpm": 86.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Yellae Lama",
+            "artist": "Vijay Prakash",
+            "album": "7th Sense",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 468,
+            "title": "23 Theme",
+            "artist": "Hector Salamanca, Anirudh Ravichander",
+            "album": "AA23",
+            "bpm": 92.3,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 14,
+            "title": "APT.",
+            "artist": "ROSÉ, Burno Mars",
+            "album": "APT.",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 503,
+            "title": "Wait a Minute!",
+            "artist": "WILLOW (Willow Smith)",
+            "album": "ARDIPITHECUS",
+            "bpm": 99.4,
+            "tags": [
+                "Chill",
+                "Dance"
+            ]
+        },
+        {
+            "id": 17,
+            "title": "Anasuya Kosam",
+            "artist": "Karthik",
+            "album": "Aa Aaa",
+            "bpm": 184.6,
+            "tags": [
+                "Dance",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 19,
+            "title": "Kiliye Kiliye",
+            "artist": "S. Janaki",
+            "album": "Aa Raathri",
+            "bpm": 184.6,
+            "tags": [
+                "Melody",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 22,
+            "title": "Aakaasam Nee Haddhu Ra",
+            "artist": "G.V.Prakash Kumar",
+            "album": "Aakaasam Nee Haddhu Ra",
+            "bpm": 103.4,
+            "tags": [
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 477,
+            "title": "Kanne Pillavani",
+            "artist": "S. P. Balasubrahmanyam, S. Janaki",
+            "album": "Aakali Rajyam",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 26,
+            "title": "Feel My Love",
+            "artist": "KK",
+            "album": "Aarya",
+            "bpm": 99.4,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 29,
+            "title": "Illuminati",
+            "artist": "Sushin Shyam, Dabzee, Vinayak Sasikumar",
+            "album": "Aavesham",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 31,
+            "title": "Jaada",
+            "artist": "Sushin Shyam, Sreenath Bhasi, Vinayak Sasikumar",
+            "album": "Aavesham",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 32,
+            "title": "Yureka",
+            "artist": "S. P. Balasubrahmanyam, S. Janaki",
+            "album": "Abhilasha",
+            "bpm": 143.6,
+            "tags": [
+                "Dance",
+                "Nostalgic",
+                "Party"
+            ]
+        },
+        {
+            "id": 36,
+            "title": "Aigiri Nandini",
+            "artist": "Brodha V",
+            "album": "Aigiri Nandini",
+            "bpm": 103.4,
+            "tags": [
+                "Devotional",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 39,
+            "title": "Panjara Punch",
+            "artist": "Vishnu Vijay",
+            "album": "Alappuzha Gymkhana",
+            "bpm": 80.7,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 49,
+            "title": "Ante Sundaraniki Promo Song",
+            "artist": "Shankar Mahadevan, Shweta Mohan",
+            "album": "Ante Sundaraniki",
+            "bpm": 152.0,
+            "tags": [
+                "Classical",
+                "Festival"
+            ]
+        },
+        {
+            "id": 51,
+            "title": "Love Elephantla",
+            "artist": "Nakul, G.V.Prakash Kumar, Tippu",
+            "album": "Aparichithudu",
+            "bpm": 103.4,
+            "tags": [
+                "Dance",
+                "Party",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 52,
+            "title": "Reddy Ikkada Soodu",
+            "artist": "Daler Mehndi, Anjana Soumya",
+            "album": "Aravindha Sametha",
+            "bpm": 103.4,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 59,
+            "title": "Nela Thally Gundalo",
+            "artist": "Shankar Mahadevan",
+            "album": "Avunanna Kaadanna",
+            "bpm": 78.3,
+            "tags": [
+                "Folk",
+                "Sad"
+            ]
+        },
+        {
+            "id": 60,
+            "title": "Venello Hai",
+            "artist": "Chakri",
+            "album": "Avunu Validdharu Istapaddaru",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 64,
+            "title": "Kalakkatha Sandana Meram",
+            "artist": "Nanjamma",
+            "album": "Ayyappanum Koshiyum",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "Folk"
+            ]
+        },
+        {
+            "id": 66,
+            "title": "Adiye",
+            "artist": "Dhibu Ninan Thomas, Kapil Kapilan",
+            "album": "Bachelor",
+            "bpm": 89.1,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 67,
+            "title": "Ballaatha Jaathi [feat. Rzee]",
+            "artist": "Dabzee, NJ, BABY JEAN",
+            "album": "Ballaatha Jaathi",
+            "bpm": 95.7,
+            "tags": [
+                "Chill",
+                "Mass"
+            ]
+        },
+        {
+            "id": 76,
+            "title": "Big Dawgs",
+            "artist": "Hanumankind",
+            "album": "Big Dawgs [Explicit]",
+            "bpm": 89.1,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 77,
+            "title": "Verithanam",
+            "artist": "A.R. Rahman, Vijay, Vivek",
+            "album": "Bigil",
+            "bpm": 89.1,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 474,
+            "title": "Billa - Theme Music",
+            "artist": "Ranjith, RiTA",
+            "album": "Billa",
+            "bpm": 99.4,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 79,
+            "title": "Blinding Lights",
+            "artist": "The Weeknd",
+            "album": "Blinding Lights",
+            "bpm": 86.1,
+            "tags": [
+                "Dance",
+                "NightDrive",
+                "Workout"
+            ]
+        },
+        {
+            "id": 82,
+            "title": "Adi Arabi Kadalandam",
+            "artist": "Remo Fernandes",
+            "album": "Bombay",
+            "bpm": 95.7,
+            "tags": [
+                "Dance",
+                "Party",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 83,
+            "title": "Apudo Ipudo",
+            "artist": "Siddharth",
+            "album": "Bommarillu",
+            "bpm": 103.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 86,
+            "title": "Evaro Nenevaro",
+            "artist": "Karthik, Priya Hemesh",
+            "album": "Brothers",
+            "bpm": 143.6,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 85,
+            "title": "Rendai Thirigae",
+            "artist": "Krish, M.K.Balaji, Mili",
+            "album": "Brothers",
+            "bpm": 107.7,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 92,
+            "title": "Mannela Tintivira",
+            "artist": "Tippu, Smitha, Kalyani",
+            "album": "Chatrapathi",
+            "bpm": 99.4,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 93,
+            "title": "Alors on danse (Radio Edit)",
+            "artist": "Stromae",
+            "album": "Cheese",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 94,
+            "title": "Hamsaro",
+            "artist": "A.R. Rahman, Arjun Chandy, Haricharan, Jonita Gandhi",
+            "album": "Cheliyaa",
+            "bpm": 99.4,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 98,
+            "title": "Fikar Not",
+            "artist": "Pritam, Amitabh Bhattacharya, Dev Negi, Sreerama Chandra",
+            "album": "Chhichhore",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Motivational",
+                "Party"
+            ]
+        },
+        {
+            "id": 97,
+            "title": "Khairiyat",
+            "artist": "Pritam",
+            "album": "Chhichhore",
+            "bpm": 123.0,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 100,
+            "title": "Glassmates",
+            "artist": "Rahul Sipligunj, Penchal Das, Devi Sri Prasad",
+            "album": "Chitralahari",
+            "bpm": 76.0,
+            "tags": [
+                "Folk",
+                "Party"
+            ]
+        },
+        {
+            "id": 99,
+            "title": "Parugu Parugu",
+            "artist": "David Simon",
+            "album": "Chitralahari",
+            "bpm": 143.6,
+            "tags": [
+                "Motivational",
+                "Travel"
+            ]
+        },
+        {
+            "id": 101,
+            "title": "Prayathname",
+            "artist": "Kailash Kher, Vishnupriya Ravi",
+            "album": "Chitralahari",
+            "bpm": 95.7,
+            "tags": [
+                "Motivational"
+            ]
+        },
+        {
+            "id": 102,
+            "title": "Prema Vennela",
+            "artist": "Sudharshan Ashok, Srimani",
+            "album": "Chitralahari",
+            "bpm": 161.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 104,
+            "title": "Monica (Telugu)",
+            "artist": "Sublahshini, Krishna Kanth",
+            "album": "Coolie",
+            "bpm": 143.6,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 105,
+            "title": "Vana Vana",
+            "artist": "Udit Narayan",
+            "album": "Daddy",
+            "bpm": 184.6,
+            "tags": [
+                "Dance",
+                "Rain",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 106,
+            "title": "Pranama",
+            "artist": "G.V.Prakash Kumar, Rahul Nambiar",
+            "album": "Darling",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 110,
+            "title": "Satte Era Satte",
+            "artist": "Ranjith Govind",
+            "album": "Desamudhuru",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 111,
+            "title": "Fear Song",
+            "artist": "Anirudh Ravichander",
+            "album": "Devara Part 1",
+            "bpm": 89.1,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 113,
+            "title": "Diwali Deepaanni",
+            "artist": "Andrea, Kalyan",
+            "album": "Dhada",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 116,
+            "title": "Neethoney Dance",
+            "artist": "Hiphop Tamizha, Nikitha Gandhi",
+            "album": "Dhruva",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 117,
+            "title": "Pareshanura",
+            "artist": "Padmalatha, Vishnu Priya",
+            "album": "Dhruva",
+            "bpm": 184.6,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 492,
+            "title": "Gajulu Gallumannaye",
+            "artist": "Usha, R. P. Patnaik",
+            "album": "Dil",
+            "bpm": 112.3,
+            "tags": [
+                "Festival",
+                "Folk",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 120,
+            "title": "Nee Dookudu",
+            "artist": "Shankar Mahadevan",
+            "album": "Dookudu",
+            "bpm": 103.4,
+            "tags": [
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 123,
+            "title": "Rise Of Dragon",
+            "artist": "Leon James, Anirudh Ravichander, Nadisha Thomas, El Fé Choir",
+            "album": "Dragon",
+            "bpm": 184.6,
+            "tags": [
+                "Mass",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 125,
+            "title": "Singari (Telugu)",
+            "artist": "Sai Abhyankkar",
+            "album": "Dude",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "Party",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 130,
+            "title": "Ga Ee Ga Ee Ga Ee",
+            "artist": "M.M. Keeravani, Deepu, Rahul Sipligunj, Sravana Bhargavi",
+            "album": "Eega",
+            "bpm": 136.0,
+            "tags": [
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 132,
+            "title": "Drive",
+            "artist": "Ed Sheeran",
+            "album": "F1 The Movie",
+            "bpm": 161.5,
+            "tags": [
+                "Travel",
+                "Workout"
+            ]
+        },
+        {
+            "id": 133,
+            "title": "Millionaire",
+            "artist": "Yo Yo Honey Singh",
+            "album": "GLORY",
+            "bpm": 95.7,
+            "tags": [
+                "Chill",
+                "Party",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 134,
+            "title": "Akasam Ammayaithe",
+            "artist": "Shankar Mahadevan, Goopika Poornima",
+            "album": "Gabbar Singh",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 135,
+            "title": "Dekho Dekho Gabbar Singh",
+            "artist": "Baba Sehgal, Naveen Madhav",
+            "album": "Gabbar Singh",
+            "bpm": 99.4,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 136,
+            "title": "Pillaa",
+            "artist": "Vaddepalli Srinivas, Pawan Kalyan",
+            "album": "Gabbar Singh",
+            "bpm": 184.6,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 138,
+            "title": "Hrudayam Ekkadunnadi",
+            "artist": "Harris Raghavendra, Bombay Jayasri",
+            "album": "Ghajini",
+            "bpm": 95.7,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 139,
+            "title": "Oka Maru",
+            "artist": "Karthik",
+            "album": "Ghajini",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 140,
+            "title": "X Pichi Y Pichi",
+            "artist": "Mathangi, Nakul",
+            "album": "Ghajini",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 146,
+            "title": "Kammani",
+            "artist": "S. P. Sailaja, S. P. Balasubrahmanyam",
+            "album": "Guna",
+            "bpm": 152.0,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 148,
+            "title": "Shinunoga E-Wa",
+            "artist": "Fujii Kaze",
+            "album": "HELP EVER HURT NEVER",
+            "bpm": 78.3,
+            "tags": [
+                "Chill",
+                "Longing",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 149,
+            "title": "Egirey Mabbulona",
+            "artist": "K. K",
+            "album": "Happy",
+            "bpm": 83.4,
+            "tags": [
+                "Heartbreak",
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 156,
+            "title": "Hello",
+            "artist": "Armaan Malik",
+            "album": "Hello!",
+            "bpm": 99.4,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 155,
+            "title": "Merise Merise",
+            "artist": "Haricharan, Srinidhi Venkatesh, Shruthi Ranjani",
+            "album": "Hello!",
+            "bpm": 92.3,
+            "tags": [
+                "Festival",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 164,
+            "title": "Asalelaa",
+            "artist": "Anurag Kulkarni, Shakthisree Gopalan",
+            "album": "Hi Nanna",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 160,
+            "title": "Odiyamma",
+            "artist": "Dhruv Vikram, Shruti Haasan, Chinmayi Sripada",
+            "album": "Hi Nanna",
+            "bpm": 103.4,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 163,
+            "title": "Samayama",
+            "artist": "Anurag Kulkarni, Sithara Krishnakumar",
+            "album": "Hi Nanna",
+            "bpm": 112.3,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 167,
+            "title": "Nagumo",
+            "artist": "Hesham Abdul Wahab, Arvind Venugopal",
+            "album": "Hridayam",
+            "bpm": 95.7,
+            "tags": [
+                "Classical",
+                "Devotional",
+                "Melody"
+            ]
+        },
+        {
+            "id": 174,
+            "title": "Choopultho Guchi",
+            "artist": "Shankar Mahadevan",
+            "album": "Idiot",
+            "bpm": 129.2,
+            "tags": [
+                "Mass",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 176,
+            "title": "Radhe Govinda",
+            "artist": "K. S. Chithra, Udit Narayan",
+            "album": "Indra",
+            "bpm": 143.6,
+            "tags": [
+                "Dance",
+                "Festival",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 179,
+            "title": "Chilaka O Chilaka",
+            "artist": "Sunitha Sarathy",
+            "album": "Inkokkadu",
+            "bpm": 99.4,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 182,
+            "title": "Oh Priya Priya",
+            "artist": "Adnan Sami, Nithya Menon",
+            "album": "Ishq",
+            "bpm": 95.7,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 183,
+            "title": "Kabhi Kabhi Aditi",
+            "artist": "Rashid Ali",
+            "album": "Jaane Tu... Ya Jaane Na",
+            "bpm": 95.7,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 184,
+            "title": "Abbanee",
+            "artist": "S. P. Balasubrahmanyam, Chitra",
+            "album": "Jagadekaveerudu Athiloka Sundari",
+            "bpm": 129.2,
+            "tags": [
+                "Melody",
+                "Rain",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 186,
+            "title": "Yamaho Nee",
+            "artist": "S. P. Balasubrahmanyam, S. Janaki",
+            "album": "Jagadekaveerudu Athiloka Sundari",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 190,
+            "title": "Chalore Chalore",
+            "artist": "Ranjith",
+            "album": "Jalsa",
+            "bpm": 136.0,
+            "tags": [
+                "Motivational",
+                "Travel"
+            ]
+        },
+        {
+            "id": 196,
+            "title": "Maamadura",
+            "artist": "Dhee",
+            "album": "Jigarthanda DoubleX",
+            "bpm": 95.7,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 197,
+            "title": "Julai",
+            "artist": "Suchith Suresan, Priya Hemesh",
+            "album": "Julai",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 198,
+            "title": "O Madhu",
+            "artist": "Adnan Sami",
+            "album": "Julai",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 199,
+            "title": "Pakado Pakado",
+            "artist": "Malgadi Subha, Devi Sri Prasad",
+            "album": "Julai",
+            "bpm": 95.7,
+            "tags": [
+                "Dance",
+                "Mass"
+            ]
+        },
+        {
+            "id": 462,
+            "title": "Just a Boy",
+            "artist": "DrINsaNE",
+            "album": "Just a Boy",
+            "bpm": 117.5,
+            "tags": [
+                "Chill",
+                "Focus"
+            ]
+        },
+        {
+            "id": 201,
+            "title": "Sulthana",
+            "artist": "Sri Krishna, Prudhvi Chandra, Arun Kaundinya, Sai Charan, Santhosh Venky, Mohan Krishna, Sachin Basrur, Ravi Basrur, Puneeth Rudranag, Manish Dinakar, Harini Ivaturi",
+            "album": "KGF Chapter 2 (Telugu)",
+            "bpm": 123.0,
+            "tags": [
+                "Mass",
+                "Motivational",
+                "Workout"
+            ]
+        },
+        {
+            "id": 458,
+            "title": "Aaja Raja",
+            "artist": "Anirudh Ravichander and Chintu",
+            "album": "KH x RK Reunion",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 205,
+            "title": "Yennai Izhukkuthadi",
+            "artist": "A. R. Rahman, Dhee",
+            "album": "Kadhalikka Neramillai",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 206,
+            "title": "Bhairava Anthem",
+            "artist": "Santhosh Narayanan, Diljit Dosanjh, Deepak Blue",
+            "album": "Kalki 2898 AD",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 210,
+            "title": "Saripovu",
+            "artist": "Haricharan",
+            "album": "Karthikeya",
+            "bpm": 92.3,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 214,
+            "title": "Govinda Govinda",
+            "artist": "Sri",
+            "album": "Khadgam",
+            "bpm": 99.4,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Party"
+            ]
+        },
+        {
+            "id": 216,
+            "title": "Sada Siva",
+            "artist": "Mani Sharma, Ramesh Vinayakam, Karunya, Ramajogayya Sastry",
+            "album": "Khaleja",
+            "bpm": 161.5,
+            "tags": [
+                "Devotional",
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 219,
+            "title": "Koyila",
+            "artist": "Vijai Bulganin",
+            "album": "Koyila",
+            "bpm": 89.1,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 221,
+            "title": "MONEY",
+            "artist": "LISA",
+            "album": "LALISA",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Party",
+                "Workout"
+            ]
+        },
+        {
+            "id": 224,
+            "title": "Ordinary Person",
+            "artist": "Anirudh Ravichander, Nikhita Gandhi",
+            "album": "Leo",
+            "bpm": 99.4,
+            "tags": [
+                "Chill",
+                "NightDrive"
+            ]
+        },
+        {
+            "id": 225,
+            "title": "Thani Lokah Murakkaari",
+            "artist": "Jakes Bejoy",
+            "album": "Lokah - Chapter 1: Chandra",
+            "bpm": 92.3,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 232,
+            "title": "Malabari Banger",
+            "artist": "M.H.R, JOKER390P, SA, Dabzee",
+            "album": "Malabari Banger",
+            "bpm": 161.5,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 233,
+            "title": "Meesaala Pilla",
+            "artist": "Udit Narayan , Shweta Mohan, Bheems Ceciroleo",
+            "album": "Mana Shankara Varaprasad Garu",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 496,
+            "title": "Jabilli Kosam (Female Version)",
+            "artist": "S. Janaki",
+            "album": "Manchi Manasulu",
+            "bpm": 95.7,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Sad"
+            ]
+        },
+        {
+            "id": 237,
+            "title": "Kuthanthram - Extended",
+            "artist": "Sushin Shyam, Vedan",
+            "album": "Manjummel Boys",
+            "bpm": 95.7,
+            "tags": [
+                "Folk",
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 242,
+            "title": "Voddura Sodhara",
+            "artist": "S. P. Balasubrahmanyam",
+            "album": "Manmadhudu",
+            "bpm": 99.4,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 243,
+            "title": "Marap",
+            "artist": "Matadoria",
+            "album": "Marap",
+            "bpm": 103.4,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 244,
+            "title": "Marvel Anthem (Telugu)",
+            "artist": "A. R. Rahman",
+            "album": "Marvel",
+            "bpm": 89.1,
+            "tags": [
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 248,
+            "title": "Kutti Story",
+            "artist": "Thalapathy Vijay, Anirudh Ravichander, Arunraja Kamaraj",
+            "album": "Master",
+            "bpm": 103.4,
+            "tags": [
+                "Chill",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 249,
+            "title": "Sakkarakatti",
+            "artist": "Hiphop Tamizha",
+            "album": "Meesaya Murukku",
+            "bpm": 64.6,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 251,
+            "title": "Param Sundari",
+            "artist": "A. R. Rahman, Shreya Ghoshal",
+            "album": "Mimi",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Party"
+            ]
+        },
+        {
+            "id": 252,
+            "title": "Mini Maharani",
+            "artist": "Vishnu Vijay, Suhail Koya, Kapil Kapilan, Vagu Mazan",
+            "album": "Mini Maharani",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 254,
+            "title": "Vibe Undi",
+            "artist": "GowraHari, Armaan Malik, Krishna Kanth",
+            "album": "Mirai",
+            "bpm": 107.7,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 256,
+            "title": "Mirchi",
+            "artist": "Chinna Ponnu",
+            "album": "Mirchi",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 255,
+            "title": "Yahoon Yahoon",
+            "artist": "Mika Singh",
+            "album": "Mirchi",
+            "bpm": 172.3,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 261,
+            "title": "Aggipulla Lanti",
+            "artist": "Gopika Poornima",
+            "album": "Mr Perfect",
+            "bpm": 161.5,
+            "tags": [
+                "Dance",
+                "Festival",
+                "Folk"
+            ]
+        },
+        {
+            "id": 264,
+            "title": "Blue Bird",
+            "artist": "Ikimono-gakari",
+            "album": "My Song Your Song",
+            "bpm": 152.0,
+            "tags": [
+                "Motivational",
+                "Nostalgic",
+                "Workout"
+            ]
+        },
+        {
+            "id": 267,
+            "title": "Dont Stop",
+            "artist": "Raghu Dixit",
+            "album": "Nannaku Prematho",
+            "bpm": 103.4,
+            "tags": [
+                "Dance",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 268,
+            "title": "Follow Follow",
+            "artist": "N. T. Rama Rao Jr.",
+            "album": "Nannaku Prematho",
+            "bpm": 95.7,
+            "tags": [
+                "Dance",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 484,
+            "title": "Meriseti Puvvaa",
+            "artist": "Srinivas, Nithyasree Mahadevan, Palakkad Sriram",
+            "album": "Narasimha",
+            "bpm": 99.4,
+            "tags": [
+                "Festival",
+                "Folk",
+                "Melody"
+            ]
+        },
+        {
+            "id": 482,
+            "title": "Narasimha",
+            "artist": "S. P. Balasubrahmanyam",
+            "album": "Narasimha",
+            "bpm": 89.1,
+            "tags": [
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 485,
+            "title": "Yekku Tholi Mettu",
+            "artist": "Palakkad Sriram",
+            "album": "Narasimha",
+            "bpm": 83.4,
+            "tags": [
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 271,
+            "title": "Crazy Feeling",
+            "artist": "Ramajogayya Sastry, Devi Sri Prasad, Prudhvi Chandra",
+            "album": "Nenu Sailaja",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 273,
+            "title": "Nightcall",
+            "artist": "Kavinsky",
+            "album": "Nightcall",
+            "bpm": 92.3,
+            "tags": [
+                "Chill",
+                "NightDrive"
+            ]
+        },
+        {
+            "id": 274,
+            "title": "Golden Sparrow",
+            "artist": "G. V. Prakash Kumar, Arivu, Dhanush, Sublahshini",
+            "album": "Nilavuku En Mel Ennadi Kobam",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 497,
+            "title": "Aakasam Yenatido",
+            "artist": "S. Janaki",
+            "album": "Nireekshana",
+            "bpm": 184.6,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 279,
+            "title": "Bye Bye Bye",
+            "artist": "*NSYNC",
+            "album": "No Strings Attached",
+            "bpm": 172.3,
+            "tags": [
+                "Dance",
+                "Party",
+                "Workout"
+            ]
+        },
+        {
+            "id": 280,
+            "title": "Chandrullo Unde",
+            "artist": "Shankar Mahadevan",
+            "album": "Nuvvostanante Nenoddantana",
+            "bpm": 112.3,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 281,
+            "title": "Preminche Premava",
+            "artist": "Shreya Ghoshal, Naresh Ayar",
+            "album": "Nuvvu Nenu Prema",
+            "bpm": 143.6,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 498,
+            "title": "Mate Rani",
+            "artist": "S. P. Balasubrahmanyam",
+            "album": "O Papa Lali",
+            "bpm": 143.6,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Sleep"
+            ]
+        },
+        {
+            "id": 283,
+            "title": "Mental Madhilo",
+            "artist": "A.R. Rahman, K. Krishna Chaitanya, Jonita Gandhi",
+            "album": "OK Bangaram",
+            "bpm": 161.5,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 287,
+            "title": "Attarintiki",
+            "artist": "Hari Haran, Shreya Ghoshal",
+            "album": "Okkadu",
+            "bpm": 143.6,
+            "tags": [
+                "Festival",
+                "Folk",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 289,
+            "title": "99 Problems",
+            "artist": "Hugo",
+            "album": "Old Tyme Religion [Explicit]",
+            "bpm": 80.7,
+            "tags": [
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 293,
+            "title": "Oka Life",
+            "artist": "Karthik",
+            "album": "Oopiri",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Motivational",
+                "Travel"
+            ]
+        },
+        {
+            "id": 295,
+            "title": "Ora Kannala",
+            "artist": "AK Sekaren",
+            "album": "Ora Kannala",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 296,
+            "title": "Nenu Nuvvantu",
+            "artist": "Naresh Iyer, Nadeesh, U.V.Jackey",
+            "album": "Orange",
+            "bpm": 92.3,
+            "tags": [
+                "Longing",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 297,
+            "title": "Rooba Rooba",
+            "artist": "Shahil Hada, Chinmayee",
+            "album": "Orange",
+            "bpm": 103.4,
+            "tags": [
+                "Melody",
+                "Romantic",
+                "Travel"
+            ]
+        },
+        {
+            "id": 299,
+            "title": "Gundellonaa",
+            "artist": "Leon James, Anirudh Ravichander",
+            "album": "Ori Devuda",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Heartbreak",
+                "Party"
+            ]
+        },
+        {
+            "id": 300,
+            "title": "Oy..Oy..",
+            "artist": "Siddharth, Prasanthini",
+            "album": "Oye",
+            "bpm": 136.0,
+            "tags": [
+                "Melody",
+                "Romantic",
+                "Travel"
+            ]
+        },
+        {
+            "id": 303,
+            "title": "Panjaa",
+            "artist": "Yuvan Shankar Raja",
+            "album": "Panjaa",
+            "bpm": 99.4,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 459,
+            "title": "Pavazha Malli",
+            "artist": "Sai Abhyankkar, Shruti Haasan and Vivek",
+            "album": "Pavazha Malli",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Party",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 461,
+            "title": "Chikiri Chikiri",
+            "artist": "Mohit Chauhan",
+            "album": "Peddi",
+            "bpm": 117.5,
+            "tags": [
+                "Folk",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 457,
+            "title": "Rai Rai Raa Raa",
+            "artist": "A.R. Rahman and Anantha Sriram",
+            "album": "Peddi",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 306,
+            "title": "Raalupoola Ragamala...",
+            "artist": "Shri, Wilson Herald, Rahul Ramakrishna",
+            "album": "Pelli Choopulu",
+            "bpm": 123.0,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 308,
+            "title": "The Box",
+            "artist": "Roddy Ricch",
+            "album": "Please Excuse Me for Being Antisocial [Explicit]",
+            "bpm": 117.5,
+            "tags": [
+                "NightDrive",
+                "Workout"
+            ]
+        },
+        {
+            "id": 310,
+            "title": "Ontarivadani",
+            "artist": "S. P. Balasubrahmanyam",
+            "album": "Prema",
+            "bpm": 143.6,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Sad"
+            ]
+        },
+        {
+            "id": 311,
+            "title": "Mustafa Mustafa",
+            "artist": "A. R. Rahman",
+            "album": "Prema Desam",
+            "bpm": 95.7,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Party"
+            ]
+        },
+        {
+            "id": 312,
+            "title": "Paadu Eevithamu",
+            "artist": "A. M. Rajah",
+            "album": "Premalekhalu",
+            "bpm": 107.7,
+            "tags": [
+                "Melody",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 314,
+            "title": "Kutty Kudiye",
+            "artist": "Vishnu Vijay",
+            "album": "Premalu",
+            "bpm": 198.8,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 322,
+            "title": "Kaane Kaane",
+            "artist": "Deepak Dev, Prithviraj",
+            "album": "Puthiyamugham",
+            "bpm": 83.4,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 326,
+            "title": "Chammak Challo",
+            "artist": "Vishal-Shekhar, Akon, Hamsika Iyer",
+            "album": "Ra-One",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 327,
+            "title": "Challaga",
+            "artist": "Rahul Nambiyar, Megha",
+            "album": "Raja Rani",
+            "bpm": 143.6,
+            "tags": [
+                "Dance",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 329,
+            "title": "Endhuko Emo",
+            "artist": "Aalap Raju, Prasanthini",
+            "album": "Rangam",
+            "bpm": 92.3,
+            "tags": [
+                "Melody",
+                "Romantic",
+                "Travel"
+            ]
+        },
+        {
+            "id": 332,
+            "title": "Aa Gattununtaava",
+            "artist": "Shiva Naagulu",
+            "album": "Rangasthalam",
+            "bpm": 95.7,
+            "tags": [
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 330,
+            "title": "Ranga Ranga Rangasthalaana",
+            "artist": "Rahul Sipligunj",
+            "album": "Rangasthalam",
+            "bpm": 89.1,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 331,
+            "title": "Yentha Sakkagunnave",
+            "artist": "Devi Sri Prasad",
+            "album": "Rangasthalam",
+            "bpm": 89.1,
+            "tags": [
+                "Folk",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 334,
+            "title": "Maar Ka Kahla",
+            "artist": "Raqueeb Alam",
+            "album": "Retro - Side B",
+            "bpm": 129.2,
+            "tags": [
+                "Dance"
+            ]
+        },
+        {
+            "id": 335,
+            "title": "Right Round (feat. Ke$ha)",
+            "artist": "Flo Rida",
+            "album": "Right Round",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Party",
+                "Workout"
+            ]
+        },
+        {
+            "id": 337,
+            "title": "Inumulo O Hrudayam",
+            "artist": "A. R. Rahman, Suzanne, Lady Kash",
+            "album": "Robot",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 343,
+            "title": "Aadharanjali",
+            "artist": "Sushin Shyam, Madhuvanthi Narayan",
+            "album": "Romancham",
+            "bpm": 99.4,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Party"
+            ]
+        },
+        {
+            "id": 342,
+            "title": "Athmave Poo",
+            "artist": "Sushin Shyam",
+            "album": "Romancham",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody"
+            ]
+        },
+        {
+            "id": 344,
+            "title": "like JENNIE [Explicit]",
+            "artist": "JENNIE",
+            "album": "Ruby",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Party"
+            ]
+        },
+        {
+            "id": 509,
+            "title": "Taralirada",
+            "artist": "S. P. Balasubrahmanyam",
+            "album": "Rudra Veena",
+            "bpm": 92.3,
+            "tags": [
+                "Classical",
+                "Melody",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 345,
+            "title": "Run It Up [Explicit]",
+            "artist": "Hanumankind",
+            "album": "Run It Up",
+            "bpm": 136.0,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 346,
+            "title": "SLAVA FUNK!",
+            "artist": "MVSTERIOUS",
+            "album": "SLAVA FUNK!",
+            "bpm": 103.4,
+            "tags": [
+                "Instrumental",
+                "Workout"
+            ]
+        },
+        {
+            "id": 347,
+            "title": "Saajanwa",
+            "artist": "Aanchal Tyagi",
+            "album": "Saajanwa",
+            "bpm": 103.4,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 351,
+            "title": "Prathi Gaadhalo",
+            "artist": "Ravi Basrur and Team",
+            "album": "Salaar Cease Fire",
+            "bpm": 112.3,
+            "tags": [
+                "Mass",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 358,
+            "title": "Ullaasam",
+            "artist": "Jakes Bejoy, Sanjith Hegde, Krishna Lasya Muthyala",
+            "album": "Saripodhaa Sanivaaram",
+            "bpm": 143.6,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 360,
+            "title": "OMG Pilla",
+            "artist": "Sid Sriram, Jonitha Gandhi",
+            "album": "Sarkar (Telugu)",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 362,
+            "title": "Tatta Tattara",
+            "artist": "Hesham Abdul Wahab, Anirudh Ravichander, Suhail Koya",
+            "album": "Sesham Mike-il Fathima",
+            "bpm": 123.0,
+            "tags": [
+                "Dance",
+                "Motivational",
+                "Party"
+            ]
+        },
+        {
+            "id": 364,
+            "title": "Naa Pere Kanchanamaala",
+            "artist": "Karthik, Malathi",
+            "album": "Shankerdada M B B S",
+            "bpm": 103.4,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 367,
+            "title": "Pattu Pattu",
+            "artist": "Manikya vinayagam, Sumangali",
+            "album": "Shankerdada M B B S",
+            "bpm": 143.6,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 363,
+            "title": "Shankerdada M.B.B.S",
+            "artist": "Mano",
+            "album": "Shankerdada M B B S",
+            "bpm": 152.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 368,
+            "title": "Thellarindoi",
+            "artist": "Devi Sri Prasad",
+            "album": "Shankerdada M B B S",
+            "bpm": 107.7,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Party"
+            ]
+        },
+        {
+            "id": 369,
+            "title": "Botany",
+            "artist": "S. P. Balasubrahmanyam",
+            "album": "Shiva",
+            "bpm": 143.6,
+            "tags": [
+                "Dance",
+                "Nostalgic",
+                "Party"
+            ]
+        },
+        {
+            "id": 378,
+            "title": "Sunflower (Spider-Man - Into the Spider-Verse)",
+            "artist": "Post Malone, Swae Lee",
+            "album": "Spider-Man: Into the Spider-Verse",
+            "bpm": 89.1,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 379,
+            "title": "Achcham Telugandham",
+            "artist": "Pravin Saivi, Christopher Stanley, Sathya Prakash",
+            "album": "Spyder",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 380,
+            "title": "Sri Venkateshwara Suprabhatham",
+            "artist": "M. S. Subbulakshmi",
+            "album": "Sri Venkateshwara Suprabhatham",
+            "bpm": 129.2,
+            "tags": [
+                "Classical",
+                "Devotional",
+                "Nostalgic"
+            ]
+        },
+        {
+            "id": 381,
+            "title": "Charuseela",
+            "artist": "Yazin Nizar, Devi Sri Prasad",
+            "album": "Srimanthudu",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 382,
+            "title": "Athey Nanne",
+            "artist": "Karthik",
+            "album": "Surya S/o Krishnan",
+            "bpm": 136.0,
+            "tags": [
+                "Melody",
+                "Romantic",
+                "Travel"
+            ]
+        },
+        {
+            "id": 384,
+            "title": "Naaloney Pongaynu",
+            "artist": "Harris Jayaraj",
+            "album": "Surya S/o Krishnan",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Rain",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 383,
+            "title": "Yedhane Koiyakae",
+            "artist": "Harris Jayaraj",
+            "album": "Surya S/o Krishnan",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "Motivational",
+                "Party"
+            ]
+        },
+        {
+            "id": 386,
+            "title": "Adi Enti Okkasari - Nee La Yevaru",
+            "artist": "Arijit Singh",
+            "album": "Swamy Ra Ra",
+            "bpm": 161.5,
+            "tags": [
+                "Chill",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 393,
+            "title": "Matargashti",
+            "artist": "Mohit Chauhan",
+            "album": "Tamasha",
+            "bpm": 99.4,
+            "tags": [
+                "Dance",
+                "Melody",
+                "Travel"
+            ]
+        },
+        {
+            "id": 394,
+            "title": "Mallika Gandha",
+            "artist": "Sid Sriram, Krishna Kanth",
+            "album": "Telusu Kada",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 491,
+            "title": "Pottala Muttaye",
+            "artist": "Sublahshini, Vivek",
+            "album": "Thalaivan Thalaivii",
+            "bpm": 103.4,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 396,
+            "title": "Manavaalan Thug",
+            "artist": "Dabzee, SA",
+            "album": "Thallumaala",
+            "bpm": 95.7,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 395,
+            "title": "Ole Melody",
+            "artist": "Haricharan Seshadri, Benny Dayal, Salim Kumar, Vishnu Vijay",
+            "album": "Thallumaala",
+            "bpm": 99.4,
+            "tags": [
+                "Festival",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 397,
+            "title": "Vaa Vaa Pakkam Vaa",
+            "artist": "Ilaiyaraaja, S. P. Balasubrahmanyam, Vani Jairam",
+            "album": "Thangamagan",
+            "bpm": 161.5,
+            "tags": [
+                "Dance",
+                "Nostalgic",
+                "Party"
+            ]
+        },
+        {
+            "id": 398,
+            "title": "Daylight",
+            "artist": "David Kushner",
+            "album": "The Dichotomy",
+            "bpm": 129.2,
+            "tags": [
+                "Chill",
+                "NightDrive",
+                "Sad"
+            ]
+        },
+        {
+            "id": 399,
+            "title": "Six Days (Remix) [feat. Mos Def]",
+            "artist": "DJ Shadow",
+            "album": "The Fast And The Furious: Tokyo Drift",
+            "bpm": 172.3,
+            "tags": [
+                "NightDrive",
+                "Workout"
+            ]
+        },
+        {
+            "id": 500,
+            "title": "Aaya Sher",
+            "artist": "Addula Jangireddy, Arjun Chandy",
+            "album": "The Paradise",
+            "bpm": 136.0,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 401,
+            "title": "I'm Shipping Up To Boston",
+            "artist": "Dropkick Murphys",
+            "album": "The Warrior's Code",
+            "bpm": 129.2,
+            "tags": [
+                "Party",
+                "Workout"
+            ]
+        },
+        {
+            "id": 402,
+            "title": "Firestorm",
+            "artist": "Thaman S, STR, Raja Kumari, Deepak Blue",
+            "album": "They Call Him OG",
+            "bpm": 95.7,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 404,
+            "title": "Guns and Roses",
+            "artist": "Thaman S, Harsha Darivemula",
+            "album": "They Call Him OG",
+            "bpm": 92.3,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 403,
+            "title": "Trance of Omi",
+            "artist": "Thaman S, Harsha Darivemula, Adviteeya Vojjala",
+            "album": "They Call Him OG",
+            "bpm": 117.5,
+            "tags": [
+                "Instrumental",
+                "Mass"
+            ]
+        },
+        {
+            "id": 406,
+            "title": "Thillana 2.0 - Dhanashree (feat. Sharanya Srinivas)",
+            "artist": "Mahesh Raghvan",
+            "album": "Thillana 2.0 - Dhanashree (feat. Sharanya Srinivas)",
+            "bpm": 107.7,
+            "tags": [
+                "Classical",
+                "Dance"
+            ]
+        },
+        {
+            "id": 409,
+            "title": "Allasani Vaari",
+            "artist": "Shreya Ghoshal",
+            "album": "Tholi Prema",
+            "bpm": 86.1,
+            "tags": [
+                "Classical",
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 411,
+            "title": "Thoothukudi Chinnaponnu",
+            "artist": "A. R. Rahman",
+            "album": "Thoothukudi Chinnaponnu",
+            "bpm": 80.7,
+            "tags": [
+                "Folk"
+            ]
+        },
+        {
+            "id": 413,
+            "title": "Muththa Mazhai (Reprise)",
+            "artist": "A.R. Rahman, Chinmayi, Siva Ananth",
+            "album": "Thug Life (Tamil)",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Rain",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 414,
+            "title": "Chilla Chilla",
+            "artist": "Ghibran, Anirudh Ravichander, Vaisagh",
+            "album": "Thunivu",
+            "bpm": 80.7,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 416,
+            "title": "I Ain't Worried",
+            "artist": "OneRepublic",
+            "album": "Top Gun: Maverick",
+            "bpm": 69.8,
+            "tags": [
+                "Chill",
+                "Party",
+                "Travel"
+            ]
+        },
+        {
+            "id": 417,
+            "title": "Do I Wanna Know",
+            "artist": "Arctic Monkeys",
+            "album": "Tranquility Base Hotel & Casino",
+            "bpm": 86.1,
+            "tags": [
+                "Longing",
+                "NightDrive"
+            ]
+        },
+        {
+            "id": 420,
+            "title": "Until I Found You",
+            "artist": "Stephen Sanchez",
+            "album": "Until I Found You",
+            "bpm": 68.0,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 421,
+            "title": "Kaantha",
+            "artist": "Masala Coffee, Sooraj Santhosh, Varun Sunil",
+            "album": "Uriyadi",
+            "bpm": 95.7,
+            "tags": [
+                "Classical",
+                "Folk"
+            ]
+        },
+        {
+            "id": 422,
+            "title": "Pataku Pranam",
+            "artist": "KK, Swarnalatha",
+            "album": "Vaasu",
+            "bpm": 129.2,
+            "tags": [
+                "Dance",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 423,
+            "title": "Kadhal Ara Onnu Vizundhuchu",
+            "artist": "Sean Roldan, Shakthisree Gopalan",
+            "album": "Vaayai Moodi Pesavum",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 452,
+            "title": "Rana Kumbha",
+            "artist": "M.M. Keeravaani, Aditya Iyengar, Chaitanya Prasad",
+            "album": "Varanasi",
+            "bpm": 89.1,
+            "tags": [
+                "Devotional",
+                "Motivational"
+            ]
+        },
+        {
+            "id": 427,
+            "title": "Ammo Ammayena",
+            "artist": "Hari Haran, Sujatha",
+            "album": "Vasantham",
+            "bpm": 117.5,
+            "tags": [
+                "Melody",
+                "Nostalgic",
+                "Romantic"
+            ]
+        },
+        {
+            "id": 429,
+            "title": "Entammede Jimikki Kammal",
+            "artist": "Shaan Rahman, Vineeth Sreenivasan, Renjith Unni",
+            "album": "Velipadinte Pusthakam",
+            "bpm": 117.5,
+            "tags": [
+                "Dance",
+                "Festival",
+                "Folk"
+            ]
+        },
+        {
+            "id": 430,
+            "title": "Mallipoo",
+            "artist": "A. R. Rahman, Madhushree",
+            "album": "Vendhu Thanindhathu Kaadu",
+            "bpm": 117.5,
+            "tags": [
+                "Folk",
+                "Longing",
+                "Melody"
+            ]
+        },
+        {
+            "id": 490,
+            "title": "Gongoora Thota",
+            "artist": "Pushpavanam Kuppu Swamy, Kalapana",
+            "album": "Venky",
+            "bpm": 95.7,
+            "tags": [
+                "Dance",
+                "Folk",
+                "Mass"
+            ]
+        },
+        {
+            "id": 489,
+            "title": "Silakemo",
+            "artist": "Sreeram, Malathi",
+            "album": "Venky",
+            "bpm": 136.0,
+            "tags": [
+                "Dance",
+                "Mass",
+                "Party"
+            ]
+        },
+        {
+            "id": 441,
+            "title": "Vikram Title Track (Telugu)",
+            "artist": "Anirudh Ravichander",
+            "album": "Vikram Hitlist",
+            "bpm": 172.3,
+            "tags": [
+                "Mass",
+                "Workout"
+            ]
+        },
+        {
+            "id": 467,
+            "title": "Vizhi Veekura",
+            "artist": "Sai Abhyankkar, Sai Smriti, Adesh Krishna",
+            "album": "Vizhi Veekura",
+            "bpm": 112.3,
+            "tags": [
+                "Melody",
+                "Romantic"
+            ]
+        }
+    ]
+}

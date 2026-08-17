@@ -1,5 +1,15 @@
 mutagen==1.47.0
 requests==2.33.0
+
+# Used only by classify.py; the downloader does not import any of these.
+# torch runs on Apple Silicon MPS. transformers 5.x renamed the CLAP processor
+# kwarg to `audio` and changed get_*_features to return an output object.
+torch==2.13.0
+torchaudio==2.13.0
+transformers==5.15.0
+librosa==1.0.0
+scikit-learn==1.9.0
+
 # YouTube changes break stream downloads periodically; a stale pin shows up as
 # "HTTP Error 403: Forbidden" on every download while metadata still resolves.
 # Bump this when that happens: pip install --upgrade yt-dlp
