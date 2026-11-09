@@ -49,10 +49,7 @@ git anyway, at the owner's request — see §12.)
 
 ```
 common.py                  no project imports — pure helpers
-   ▲        ▲        ▲        ▲
-   │        │        │        └── classify.py          optional ML tagging, standalone
-   │        │        │
-   │        │        └── organize_albums.py     standalone safety net
+   ▲        ▲
    │        │
    │        └─────────── repair.py              imports the manager lazily
    │                        ▲
@@ -63,7 +60,7 @@ common.py                  no project imports — pure helpers
 
 ### `common.py` — the shared foundation
 
-Everything that both scripts need, and nothing else. It has no project imports,
+Everything the scripts share, and nothing else. It has no project imports,
 so it can never participate in a circular dependency.
 
 | Function | Purpose |
@@ -105,19 +102,6 @@ audio files in one reviewed pass, without the download pass. Imports
 `download_image` and `init_db` from the manager at module load — the manager
 never imports it back, so there is no cycle. Dry-run by default. See §8.
 
-### `organize_albums.py` — the safety net
-
-The downloader now writes straight into album folders, so this is no longer a
-required step. It exists to sweep up files left in the flat `Songs/` root by
-older runs or moved by hand.
-
-### `classify.py` — optional classification
-
-Tags tracks by rhythm, mood and activity using MERT/CLAP embeddings and a
-trained probe, and writes playlists. It imports only `common`, keeps its heavy
-ML dependencies to itself, and stores its results in its own tables (§3).
-Nothing in the download or metadata path depends on it.
-
 ---
 
 ## 3. Database schema
@@ -135,11 +119,6 @@ CREATE TABLE tracks (
     error         TEXT,      -- last failure message
     file_hash     TEXT,      -- SHA-256 of the finished file
     file_path     TEXT,      -- RELATIVE to the project root
-    -- added later by ALTER TABLE, so they sit at the end of the row:
-    file_md5          TEXT,      -- not written by any script in this repo
-    drive_file_id     TEXT,      -- Google Drive sync bookkeeping; not read or
-    drive_synced_hash TEXT,      --   written by any script in this repo
-    drive_synced_at   DATETIME,
     year          INTEGER    -- release year → the ©day tag; added by init_db()
 );
 
@@ -153,17 +132,7 @@ CREATE TABLE activity_log (
 
 CREATE INDEX idx_tracks_file_hash ON tracks (file_hash);
 CREATE INDEX idx_tracks_status    ON tracks (status);
-CREATE INDEX idx_tracks_drive_id  ON tracks (drive_file_id);
 CREATE INDEX idx_log_track_id     ON activity_log (track_id);
-
--- Owned by classify.py; the downloader never touches them.
-CREATE TABLE track_features (track_id INTEGER PRIMARY KEY, bpm REAL, energy REAL,
-    duration REAL, mert_embedding BLOB, clap_embedding BLOB,
-    model_version TEXT, analyzed_at DATETIME);
-CREATE TABLE track_labels (track_id INTEGER, tag TEXT, present INTEGER,
-    labelled_at DATETIME, PRIMARY KEY (track_id, tag));
-CREATE TABLE track_tags (track_id INTEGER, tag TEXT, score REAL, source TEXT,
-    PRIMARY KEY (track_id, tag, source));
 ```
 
 **`year` is added by migration.** `init_db()` runs `ALTER TABLE … ADD COLUMN
@@ -175,8 +144,7 @@ non-year values) before it is compared or stored.
 > **Why the file hash changes when only a tag changes.** `file_hash` is the
 > SHA-256 of the whole file, tags included. Any retag — a year added, an artist
 > corrected — therefore produces a new hash, and anything keyed on the old one
-> (such as an external Drive sync comparing `drive_synced_hash`) will see the
-> file as changed.
+> (a backup or sync tool, for example) will see the file as changed.
 
 **`youtube_link` is the identity key.** Not the title, not the id. It is the only
 field guaranteed stable when you correct a title or album in the JSON, so it is
@@ -472,7 +440,7 @@ look when something behaves unexpectedly.
 | Cover art | `IMAGE_CACHE`, `IMAGE_CACHE_INVALID`, `IMAGE_CONVERTED`, `DOWNLOADING_IMAGE` |
 | Metadata sync | `METADATA_SYNCED`, `RETAG_MISSING_FILE`, `RETAG_FAILED` |
 | `apply_metadata.py` | `METADATA_APPLIED` (details list every `field: old -> new` and any move), `METADATA_APPLY_FAILED` |
-| Organizer | `MOVED_TO_ALBUM` |
+| Organizer (retired script, historical rows only) | `MOVED_TO_ALBUM` |
 | Repair | `REPAIRED`, `REPAIR_MOVED`, `REPAIR_REQUEUED`, `REPAIR_METADATA_SYNCED`, `REPAIR_COVER_CLEARED`, `REPAIR_VERIFY_FAILED` |
 
 ---

@@ -13,7 +13,6 @@ works internally, see [ARCHITECTURE.md](ARCHITECTURE.md).
 - [Re-tagging on demand](#re-tagging-on-demand)
 - [Command reference](#command-reference)
 - [Repairing the database](#repairing-the-database)
-- [Organizing stray files](#organizing-stray-files)
 - [Reading the status values](#reading-the-status-values)
 - [Troubleshooting](#troubleshooting)
 - [Inspecting the database](#inspecting-the-database)
@@ -421,7 +420,6 @@ Standalone scripts:
 ```bash
 venv/bin/python apply_metadata.py             # preview JSON edits (dry run)
 venv/bin/python apply_metadata.py --apply     # apply them to the database and files
-venv/bin/python organize_albums.py            # file stray tracks into album folders
 venv/bin/python repair.py --apply             # same as --repair --apply
 ```
 
@@ -509,35 +507,6 @@ venv/bin/python youtube_music_manager.py --repair --apply --fetch-art
 
 ---
 
-## Organizing stray files
-
-The downloader writes straight into `Songs/<Album>/`, so this is only a safety
-net for files left in the flat root by older runs or moved by hand.
-
-```bash
-venv/bin/python organize_albums.py
-```
-
-```
-Found 500 downloaded tracks. Organizing by album...
-
-==== ORGANIZATION SUMMARY ====
-Total processed: 500
-Successfully moved: 0
-Already in place: 500
-Missing files: 0
-Name conflicts: 0
-==============================
-```
-
-| Counter | Meaning |
-|---|---|
-| Already in place | Correct — nothing to do |
-| Missing files | The database points somewhere with no file. Run `--repair` |
-| Name conflicts | Two tracks want the same path. Both left untouched; rename one in the JSON |
-
----
-
 ## Reading the status values
 
 | Status | Meaning | Retried? |
@@ -609,7 +578,7 @@ Uncomment the `cookiefile` line in `build_ydl_opts()` in
 [youtube_music_manager.py](youtube_music_manager.py) and export your browser
 cookies to `cookies.txt` in the project root.
 
-### Everything shows "File not found" in the organizer
+### Songs show as missing after moving the project folder
 
 The stored paths are stale — usually because the project folder was moved.
 
@@ -832,9 +801,8 @@ If you only want to keep the old log, copy the table across from
 
 **Git:** `Songs/`, `venv/`, `downloads.db.bak` and the SQLite `-wal`/`-shm`
 sidecars are ignored. The repository tracks the source, `requirements.txt`,
-`songs_meta_data.json`, the classifier's data (`review.json`, `features.npz`,
-`probe.pkl`) and — at the owner's request — `downloads.db` itself. The
-database is ~90 MB and git stores a full copy on every commit that touches it,
+`songs_meta_data.json` and — at the owner's request — `downloads.db` itself.
+The database is ~87 MB (GitHub rejects files over 100 MB) and git stores a full copy on every commit that touches it,
 so commit it sparingly. The timestamped backups `apply_metadata.py` makes
 (`downloads.db.<YYYYMMDD-HHMMSS>.bak`) are **not** covered by `.gitignore`;
 delete them rather than committing them.

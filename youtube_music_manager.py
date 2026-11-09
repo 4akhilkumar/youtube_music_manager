@@ -312,8 +312,8 @@ def candidate_paths(track):
     canonical = resolve_path(track_relpath(track["title"], track["album"]))
     candidates = [canonical]
 
-    # Older runs wrote into the flat Songs/ root before the organizer moved
-    # files into album folders.
+    # Older runs wrote into the flat Songs/ root before tracks were filed
+    # into album folders.
     candidates.append(os.path.join(SONGS_DIR, track_filename(track["title"])))
 
     stored = resolve_path(track.get("file_path"))
@@ -535,7 +535,7 @@ def process_song(track):
         print(f"🎶 Started: {title}")
 
         # Deduplication Check & Database Healing.
-        # The organizer files tracks under Songs/<album>/, so a song already on
+        # Tracks are filed under Songs/<album>/, so a song already on
         # disk will not be at the flat path older versions looked at. Checking
         # every candidate is what stops good downloads being fetched again.
         for candidate in candidates:

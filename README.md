@@ -96,8 +96,6 @@ track's status to `pending`, and run `youtube_music_manager.py` (see
 | `youtube_music_manager.py` | Main entry point — sync, download, tag, report (`--retag`, `--repair`) |
 | `apply_metadata.py` | Applies edits in `songs_meta_data.json` to the database and the files, without downloading |
 | `repair.py` | Reconciles the database with the files actually on disk |
-| `organize_albums.py` | Safety net that files stray tracks into album folders |
-| `classify.py` | Optional: classifies tracks by rhythm, mood and activity, and builds playlists |
 | `common.py` | Shared config, name sanitization, path handling, DB connections |
 | `songs_meta_data.json` | The source of truth for *what* to download and how to tag it |
 | `downloads.db` | The source of truth for *what happened* (tracked in git; commit it sparingly — see `.gitignore`) |
@@ -108,4 +106,3 @@ track's status to `pending`, and run `youtube_music_manager.py` (see
 - Python 3.12+
 - ffmpeg (used by yt-dlp for audio extraction, and to convert WEBP cover art)
 - Packages pinned in `requirements.txt`: `yt-dlp`, `mutagen`, `requests`
-  (the ML packages there are needed only by `classify.py`)
