@@ -4270,5 +4270,69 @@
         "year": 1989,
         "image_url": "https://m.media-amazon.com/images/I/71Vaz7oS5aL._UX716_FMwebp_QL85_.jpg",
         "youtube_link": "https://music.youtube.com/watch?v=xAgUYyosqVM"
+    },
+    {
+        "title": "KALYANI",
+        "artist": "ARJN, KDS, FIFTY4, RONN",
+        "album": "KALYANI",
+        "year": 2025,
+        "image_url": "https://m.media-amazon.com/images/I/71X7nKVxUpL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=TijBIPD4Jbw"
+    },
+    {
+        "title": "Pesamale",
+        "artist": "Siri Xander, Arra Aria Khayal",
+        "album": "Pesamale",
+        "year": 2026,
+        "image_url": "https://m.media-amazon.com/images/I/71yxHTBu4wL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=jifBuWCqGJ8"
+    },
+    {
+        "title": "Udi Udi",
+        "artist": "Aneesh, Sarkar, Hruday",
+        "album": "Udi Udi",
+        "year": 2026,
+        "image_url": "https://m.media-amazon.com/images/I/81NtCVVNiFL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=SBOwcGnwuKM"
+    },
+    {
+        "title": "Bindaas",
+        "artist": "Deepthi Suresh, Anirudh Ravichander, Super Subu",
+        "album": "Jailer 2",
+        "year": 2026,
+        "image_url": "https://m.media-amazon.com/images/I/51cwIly2b6L._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=TKV9C7xa8CA"
+    },
+    {
+        "title": "Vaama Vaama",
+        "artist": "Thaman S, Dhanush, Adesh Krishna",
+        "album": "Idhayam Murali",
+        "year": 2026,
+        "image_url": "https://m.media-amazon.com/images/I/91PiSORIJFL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=-B8BFhM0pqU"
+    },
+    {
+        "title": "Killin' 'em",
+        "artist": "Sushin Shyam, Yung Raja",
+        "album": "Scene",
+        "year": 2026,
+        "image_url": "https://m.media-amazon.com/images/I/51nyg06r5FL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=VPI2ORXVwgg"
+    },
+    {
+        "title": "Aeroplane",
+        "artist": "Sushin Shyam, Gana Bala, Rajpriyan",
+        "album": "Scene",
+        "year": 2026,
+        "image_url": "https://m.media-amazon.com/images/I/71Td96JEd4L._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=nmtHtt15h7s"
+    },
+    {
+        "title": "Aathi Iva Yarraa",
+        "artist": "Sushin Shyam, Rajpriyan",
+        "album": "Scene",
+        "year": 2026,
+        "image_url": "https://m.media-amazon.com/images/I/71TYA0zgVzL._UX716_FMwebp_QL85_.jpg",
+        "youtube_link": "https://music.youtube.com/watch?v=D9X_PSIcZXs"
     }
 ]
