@@ -23,6 +23,9 @@ Understanding which one owns what explains almost every design decision.
         │                                       ▲
         │ sync_json_to_db()                     │ yt-dlp download
         │ inserts new, updates changed          │ mutagen tagging
+        │                                       │
+        │ apply_metadata.py ────────────────────┤ retag + refile,
+        │ updates rows (incl. changed links)    │ never downloads
         ▼                                       │
    ┌─────────────────────────────────────────────────┐
    │                downloads.db                     │
@@ -37,8 +40,8 @@ Understanding which one owns what explains almost every design decision.
 The rule that makes this work: **the JSON wins on metadata, the disk wins on
 existence, and the database is derived from both.** Whenever they disagree,
 `repair.py` rebuilds the database rather than the other way around. The database
-is disposable; the JSON and the audio are not. That is why `downloads.db` is
-git-ignored.
+is, in principle, disposable; the JSON and the audio are not. (It is tracked in
+git anyway, at the owner's request — see §12.)
 
 ---
 
@@ -46,13 +49,16 @@ git-ignored.
 
 ```
 common.py                  no project imports — pure helpers
-   ▲        ▲        ▲
+   ▲        ▲        ▲        ▲
+   │        │        │        └── classify.py          optional ML tagging, standalone
    │        │        │
    │        │        └── organize_albums.py     standalone safety net
    │        │
    │        └─────────── repair.py              imports the manager lazily
    │                        ▲
-   └────────────────────────┴── youtube_music_manager.py   entry point
+   ├────────────────────────┴── youtube_music_manager.py   entry point
+   │                                    ▲
+   └────────────────────────────────────┴── apply_metadata.py   JSON edits → DB + files
 ```
 
 ### `common.py` — the shared foundation
@@ -91,11 +97,26 @@ Run when the database and the disk have diverged. Dry-run by default; only
 `--apply` writes. Imports from the manager *inside functions* so the manager can
 lazily import `run_repair` without a circular import at module load.
 
+### `apply_metadata.py` — applying JSON edits
+
+Pushes hand corrections in `songs_meta_data.json` into the database and the
+audio files in one reviewed pass, without the download pass. Imports
+`add_metadata`, `parse_year`, `verify_audio_file`, `calculate_file_hash`,
+`download_image` and `init_db` from the manager at module load — the manager
+never imports it back, so there is no cycle. Dry-run by default. See §8.
+
 ### `organize_albums.py` — the safety net
 
 The downloader now writes straight into album folders, so this is no longer a
 required step. It exists to sweep up files left in the flat `Songs/` root by
 older runs or moved by hand.
+
+### `classify.py` — optional classification
+
+Tags tracks by rhythm, mood and activity using MERT/CLAP embeddings and a
+trained probe, and writes playlists. It imports only `common`, keeps its heavy
+ML dependencies to itself, and stores its results in its own tables (§3).
+Nothing in the download or metadata path depends on it.
 
 ---
 
@@ -113,7 +134,13 @@ CREATE TABLE tracks (
     status        TEXT,      -- see the state machine below
     error         TEXT,      -- last failure message
     file_hash     TEXT,      -- SHA-256 of the finished file
-    file_path     TEXT       -- RELATIVE to the project root
+    file_path     TEXT,      -- RELATIVE to the project root
+    -- added later by ALTER TABLE, so they sit at the end of the row:
+    file_md5          TEXT,      -- not written by any script in this repo
+    drive_file_id     TEXT,      -- Google Drive sync bookkeeping; not read or
+    drive_synced_hash TEXT,      --   written by any script in this repo
+    drive_synced_at   DATETIME,
+    year          INTEGER    -- release year → the ©day tag; added by init_db()
 );
 
 CREATE TABLE activity_log (
@@ -126,12 +153,37 @@ CREATE TABLE activity_log (
 
 CREATE INDEX idx_tracks_file_hash ON tracks (file_hash);
 CREATE INDEX idx_tracks_status    ON tracks (status);
+CREATE INDEX idx_tracks_drive_id  ON tracks (drive_file_id);
 CREATE INDEX idx_log_track_id     ON activity_log (track_id);
+
+-- Owned by classify.py; the downloader never touches them.
+CREATE TABLE track_features (track_id INTEGER PRIMARY KEY, bpm REAL, energy REAL,
+    duration REAL, mert_embedding BLOB, clap_embedding BLOB,
+    model_version TEXT, analyzed_at DATETIME);
+CREATE TABLE track_labels (track_id INTEGER, tag TEXT, present INTEGER,
+    labelled_at DATETIME, PRIMARY KEY (track_id, tag));
+CREATE TABLE track_tags (track_id INTEGER, tag TEXT, score REAL, source TEXT,
+    PRIMARY KEY (track_id, tag, source));
 ```
+
+**`year` is added by migration.** `init_db()` runs `ALTER TABLE … ADD COLUMN
+year INTEGER` and ignores the "duplicate column" error, the same pattern used
+for `image_blob`, so any older database upgrades itself on the next run.
+`parse_year()` turns the JSON value into an int (or `None` for missing or
+non-year values) before it is compared or stored.
+
+> **Why the file hash changes when only a tag changes.** `file_hash` is the
+> SHA-256 of the whole file, tags included. Any retag — a year added, an artist
+> corrected — therefore produces a new hash, and anything keyed on the old one
+> (such as an external Drive sync comparing `drive_synced_hash`) will see the
+> file as changed.
 
 **`youtube_link` is the identity key.** Not the title, not the id. It is the only
 field guaranteed stable when you correct a title or album in the JSON, so it is
-what `sync_json_to_db()` matches on and what carries a `UNIQUE` constraint.
+what `sync_json_to_db()` matches on and what carries a `UNIQUE` constraint. The
+one exception is `apply_metadata.py`, which falls back to title + album when a
+link is not found, precisely so a *changed* link can be moved onto its existing
+row (§8).
 
 **`file_path` is relative.** Always write it through `store_path()` and read it
 through `resolve_path()`. `update_track_record()` applies `store_path()` for you.
@@ -158,7 +210,7 @@ only ever populated with verified JPEG or PNG bytes — see §6.
              retried next run                              │
                                                            │
                           metadata edited in JSON          │
-                     (title / artist / album / image_url)  │
+              (title / artist / album / year / image_url)  │
                                     │                      │
                                     ▼                      │
                               needs_retag ◄────────────────┘
@@ -277,8 +329,17 @@ convertible, and only then goes to the network.
 
 ## 7. Concurrency and SQLite
 
-Four worker threads (`MAX_WORKERS = 4`), each opening its own connection through
+Two worker threads (`MAX_WORKERS = 2`), each opening its own connection through
 `get_conn()`. Connections are not shared across threads.
+
+> **Why two, not four.** Four simultaneous downloads tripped YouTube's rate
+> limiter: on 2026-08-17 all four workers started at once and three died with
+> HTTP 403 within seconds. Two still overlaps the network wait with the
+> tagging/hashing tail without bursting.
+
+`apply_metadata.py` is deliberately single-threaded: it does no network I/O
+in the common case, and processing songs in JSON order keeps its report and
+its activity-log entries readable.
 
 Every connection gets the same treatment:
 
@@ -318,10 +379,11 @@ For each JSON entry:
   otherwise            ──► update in place
 ```
 
-**Every tracked field is a retag trigger.** `title`, `artist` and `album` all end
-up as tags inside the file, and `title`/`album` additionally decide where it is
-filed; `image_url` decides the embedded cover. So the condition is simply
-"already downloaded and something changed":
+**Every tracked field is a retag trigger.** `title`, `artist`, `album` and
+`year` all end up as tags inside the file (`©nam`, `©ART`, `©alb`, `©day`), and
+`title`/`album` additionally decide where it is filed; `image_url` decides the
+embedded cover. So the condition is simply "already downloaded and something
+changed":
 
 ```python
 needs_retag = existing["status"] == "downloaded" and bool(changes)
@@ -349,6 +411,51 @@ diff. It re-applies what the **database** holds, so it is the tool for forcing a
 file back into agreement with its row after a direct database edit or an external
 tagger. It uses cached art and therefore needs no network access at all.
 
+### `apply_metadata.py` — reviewed, download-free JSON application
+
+`sync_json_to_db()` has two gaps when the JSON is corrected in bulk: it gives
+no preview, and a changed `youtube_link` looks like a brand-new song (a
+duplicate row that adopts the old file). `apply_metadata.py` closes both.
+
+```
+main(--apply?)
+│
+├─ load_json()       normalise each entry; parse_year() on "year"
+├─ match_rows()      1. by youtube_link
+│                    2. leftovers: by exact title + album, one-to-one only
+│                       (a match here stores the new link on the old row)
+├─ plan_song()       per pair, write nothing:
+│     ├─ field diff  title / artist / album / year / image_url / youtube_link
+│     ├─ tag diff    read ©nam ©ART ©alb ©day from the file itself
+│     ├─ move?       current file_path vs track_relpath(title, album)
+│     └─ errors      file missing/unreadable, or destination taken by another file
+├─ report            counts per field, every non-year change, every "!!" problem
+│
+└─ if --apply:
+      ├─ backup_database()   timestamped, via the SQLite backup API
+      ├─ init_db()           adds the year column if missing
+      └─ apply_plan()        per song, committed individually:
+            move_file() ─► add_metadata() ─► hash ─► UPDATE row ─► log
+            ─► prune_empty_dir(old album folder)
+```
+
+Design points worth preserving:
+
+- **It diffs the file as well as the row.** A song is updated when either
+  disagrees with the JSON, so tags changed by another program are repaired
+  too, and `Songs to update: 0` is a real end-to-end check.
+- **Cover art is never re-fetched unless `image_url` changed.**
+  `add_metadata(..., image_bytes=None)` leaves the existing `covr` atom alone.
+- **A changed link only updates the record.** The audio on disk is kept;
+  fetching the new recording is a separate, explicit step (requeue the row as
+  `pending` with the old file moved aside — see USAGE.md).
+- **The fallback match is strict.** Exact title *and* album, and only when
+  exactly one unclaimed row fits. Anything else is reported, not guessed.
+- **Case-only renames go through a temp name**, because on a case-insensitive
+  disk the source and destination are the same file.
+- **The dry run never writes** — not even the `year` column migration, which
+  is why `init_db()` only runs under `--apply`.
+
 ---
 
 ## 9. The activity log
@@ -364,6 +471,7 @@ look when something behaves unexpectedly.
 | Tagging | `ADDING_METADATA`, `CALCULATING_HASH` |
 | Cover art | `IMAGE_CACHE`, `IMAGE_CACHE_INVALID`, `IMAGE_CONVERTED`, `DOWNLOADING_IMAGE` |
 | Metadata sync | `METADATA_SYNCED`, `RETAG_MISSING_FILE`, `RETAG_FAILED` |
+| `apply_metadata.py` | `METADATA_APPLIED` (details list every `field: old -> new` and any move), `METADATA_APPLY_FAILED` |
 | Organizer | `MOVED_TO_ALBUM` |
 | Repair | `REPAIRED`, `REPAIR_MOVED`, `REPAIR_REQUEUED`, `REPAIR_METADATA_SYNCED`, `REPAIR_COVER_CLEARED`, `REPAIR_VERIFY_FAILED` |
 
@@ -421,6 +529,10 @@ Design points worth preserving if you modify it:
 7. **Log state transitions to `activity_log`.** It is the only forensic trail.
 8. **Never embed unverified bytes as cover art.** Route through
    `detect_image_format()` / `build_cover()`.
+9. **A new tag field touches four places.** The column in `init_db()` (as an
+   `ALTER TABLE` migration), the diff in `sync_json_to_db()`, the write in
+   `add_metadata()`, and `FIELDS`/`TAGS` in `apply_metadata.py`. `year` is the
+   worked example. `repair.py` is the fifth, if it should re-sync the field.
 
 ---
 
@@ -434,6 +546,16 @@ Design points worth preserving if you modify it:
   Windows or exFAT volume may still need manual attention for a handful of names.
 - **No automated test suite.** Behaviour is verified by running `--repair` in dry
   mode and by the manual regression recipes in [USAGE.md](USAGE.md#regression-recipes).
-- **`.git` still carries ~137 MB** of historical `downloads.db` snapshots. The
-  database is now git-ignored so it stops growing, but reclaiming that space
-  requires a history rewrite.
+- **`downloads.db` is tracked in git** at the owner's request. It is ~90 MB,
+  mostly cover-art blobs, and git stores a full copy on every commit that
+  touches it, so `.git` grows by that much each time. Commit it sparingly;
+  reclaiming space already used requires a history rewrite.
+- **`repair.py` does not re-sync `year` or `youtube_link`.** Its JSON re-sync
+  covers `title`, `artist`, `album` and `image_url` only. Use
+  `apply_metadata.py` for the rest.
+- **A changed `youtube_link` does not re-download by itself** — neither the
+  plain run (which adopts the existing file) nor `apply_metadata.py` (which
+  only updates the record) fetches the new audio. That takes an explicit
+  requeue.
+- **`apply_metadata.py`'s timestamped backups are not git-ignored.** `.gitignore`
+  lists `downloads.db.bak` only.

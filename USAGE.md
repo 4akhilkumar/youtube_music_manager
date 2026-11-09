@@ -9,6 +9,7 @@ works internally, see [ARCHITECTURE.md](ARCHITECTURE.md).
 - [The everyday workflow](#the-everyday-workflow)
 - [Adding songs](#adding-songs)
 - [Correcting metadata](#correcting-metadata)
+- [Applying edits with apply_metadata.py](#applying-edits-with-apply_metadatapy)
 - [Re-tagging on demand](#re-tagging-on-demand)
 - [Command reference](#command-reference)
 - [Repairing the database](#repairing-the-database)
@@ -55,11 +56,12 @@ venv/bin/python youtube_music_manager.py
 
 That single command does all of this:
 
-1. Creates the database and tables if they don't exist
+1. Creates the database and tables if they don't exist (and adds any missing
+   columns, such as `year`, to an older database)
 2. Requeues any track stranded by an interrupted previous run
 3. Syncs `songs_meta_data.json` into the database — new songs in, corrected metadata updated
-4. Refiles and re-tags any track whose title or album changed
-5. Downloads everything still `pending` or `failed`, four at a time
+4. Refiles and re-tags any track whose title, artist, album, year or cover changed
+5. Downloads everything still `pending` or `failed`, two at a time
 6. Prints a summary
 
 **When everything is already downloaded:**
@@ -68,8 +70,8 @@ That single command does all of this:
 ✅ All tracks are already downloaded or no pending tracks found.
 
 ==== SUMMARY ====
-✅ Downloaded: 500
-📊 Total tracks: 500
+✅ Downloaded: 534
+📊 Total tracks: 534
 🎵 Audio files located in: /Users/you/Downloads/youtube_music_manager/Songs
 =================
 ```
@@ -101,13 +103,14 @@ Re-running is always safe. Completed tracks are skipped, failures are retried.
 
 ## Adding songs
 
-Append an entry to `songs_meta_data.json`. All five fields matter:
+Append an entry to `songs_meta_data.json`. All six fields matter:
 
 ```json
 {
   "title": "Diyalo Diyala",
   "artist": "Priya Hemesh",
   "album": "100% Love",
+  "year": 2011,
   "image_url": "https://m.media-amazon.com/images/I/81s8F+FP5DL._SX472_.jpg",
   "youtube_link": "https://music.youtube.com/watch?v=eIXVLAu60-E"
 }
@@ -116,8 +119,9 @@ Append an entry to `songs_meta_data.json`. All five fields matter:
 | Field | Notes |
 |---|---|
 | `title` | Becomes the filename and the `©nam` tag. Illegal characters are stripped automatically |
-| `artist` | The `©ART` tag |
+| `artist` | The `©ART` tag. Separate several artists with `, ` |
 | `album` | Becomes the **folder name** and the `©alb` tag |
+| `year` | Release year, written to the `©day` tag (shown as *Year* in players). A number such as `2016`; `null` or missing clears the tag |
 | `image_url` | Cover art. JPEG or PNG preferred; WEBP and GIF are converted automatically |
 | `youtube_link` | **The identity key.** Must be unique — it is how a JSON entry is matched to its database row |
 
@@ -137,8 +141,14 @@ Output: `Added 1 new tracks to the database.` followed by the download.
 
 ## Correcting metadata
 
-Edit the entry in `songs_meta_data.json` — **keep `youtube_link` unchanged** —
-and re-run. The tool does the rest.
+Edit the entry in `songs_meta_data.json` and re-run. The tool does the rest.
+There are two ways to apply the edits:
+
+- **The plain command** (below) — applies edits as part of a normal sync run.
+  Keep `youtube_link` unchanged for this route.
+- **[`apply_metadata.py`](#applying-edits-with-apply_metadatapy)** — previews
+  every change first, never downloads audio, and also handles a changed
+  `youtube_link`. Prefer this after a batch of hand corrections.
 
 **Example: fixing a typo in a title.**
 
@@ -170,13 +180,15 @@ That renamed the file on disk, rewrote the tag inside it, and re-hashed it —
 | `title` | File renamed, `©nam` tag rewritten, re-hashed |
 | `album` | File **moved to the new album folder**, `©alb` tag rewritten |
 | `artist` | `©ART` tag rewritten in the file |
+| `year` | `©day` tag rewritten in the file |
 | `image_url` | Cached art discarded, new art downloaded and embedded |
 | Several at once | All applied in one pass |
-| `youtube_link` | Treated as a **brand new song** — see the warning below |
+| `youtube_link` | Plain command: treated as a **brand new song** — see the warning below. Use `apply_metadata.py` instead |
 
-Any change to a downloaded track's `title`, `album`, `artist` or `image_url`
-marks it `needs_retag`, and the next plain run rewrites the actual file — not
-just the database row. **No re-download**; only new cover art is fetched.
+Any change to a downloaded track's `title`, `album`, `artist`, `year` or
+`image_url` marks it `needs_retag`, and the next plain run rewrites the actual
+file — not just the database row. **No re-download**; only new cover art is
+fetched.
 
 **Example: correcting an artist name and the cover in one go.**
 
@@ -201,6 +213,89 @@ Refreshed metadata for 1 existing tracks from JSON.
 ```
 
 Both the `©ART` tag and the embedded cover art in `Husn.m4a` are now updated.
+
+---
+
+## Applying edits with apply_metadata.py
+
+`apply_metadata.py` brings the database and every audio file into line with
+`songs_meta_data.json` in one reviewed pass. It **never downloads audio**.
+
+**Always preview first** — the default is a dry run that writes nothing:
+
+```bash
+venv/bin/python apply_metadata.py
+```
+
+```
+JSON songs: 534   database rows: 534   matched: 534
+Songs to update: 2   (files moved/renamed: 2)
+  title         changes: 0
+  artist        changes: 0
+  album         changes: 2
+  year          changes: 0
+  image_url     changes: 0
+  youtube_link  changes: 0
+
+-- Changes other than year --
+  [316] Rockaankuthu (Premam (Malayalam))
+      album: 'Premam' -> 'Premam (Malayalam)'
+      file: Songs/Premam/Rockaankuthu.m4a -> Songs/Premam (Malayalam)/Rockaankuthu.m4a
+  [317] Evare (Premam (Telugu))
+      album: 'Premam' -> 'Premam (Telugu)'
+      file: Songs/Premam/Evare.m4a -> Songs/Premam (Telugu)/Evare.m4a
+
+Dry run - nothing was changed. Re-run with --apply to write these changes.
+```
+
+Year-only changes are counted but not listed one by one. If the report looks
+right, apply it:
+
+```bash
+venv/bin/python apply_metadata.py --apply
+```
+
+```
+Database backed up to downloads.db.20261109-150212.bak
+...
+Updated 2 song(s), 0 failed.
+```
+
+**What it does for each song:**
+
+1. Matches the JSON entry to its database row by `youtube_link`. If the link is
+   not in the database, it falls back to a row with the **same title and album**
+   and stores the new link on it — no duplicate row, no download.
+2. Updates the row's `title`, `artist`, `album`, `year`, `image_url` and
+   `youtube_link`.
+3. Rewrites the file's `©nam`, `©ART`, `©alb` and `©day` tags. The cover art
+   already embedded in the file is kept; new art is fetched only when
+   `image_url` changed.
+4. Moves or renames the file to `Songs/<Album>/<Title>.m4a` when the album or
+   title changed, and removes album folders left empty.
+5. Stores the new path and SHA-256 hash, and logs `METADATA_APPLIED` to
+   `activity_log`.
+
+A song is updated whenever its row *or* its file tags disagree with the JSON,
+so it also repairs tags changed by another program. When nothing differs it
+reports `Songs to update: 0` — a quick way to confirm the library is in sync.
+
+**Problems are listed, never guessed at.** These lines start with `!!` and the
+song is left untouched:
+
+| Message | Meaning |
+|---|---|
+| `audio file missing` | The row's file is not on disk. Restore `Songs/`, or run `--repair` |
+| `destination already holds another file` | Two songs would land on the same path. Rename one in the JSON |
+| `In JSON but no database row matched` | New song, or its link *and* title/album both changed. Run the plain command to add it |
+| `In database but not in JSON` | A row with no JSON entry. Left alone |
+
+The script exits with status 1 when any song failed or was reported with `!!`.
+
+**Safety:** with `--apply` the database is backed up first to
+`downloads.db.<YYYYMMDD-HHMMSS>.bak` (SQLite backup API, WAL-safe), and each
+song is committed on its own, so an interruption leaves a consistent database.
+Delete old `.bak` files once you are happy with the result.
 
 ---
 
@@ -257,50 +352,51 @@ you the move before it happens:
 > command. `--retag` re-applies what the database already holds; it does not
 > read the JSON.
 
-### ⚠️ Replacing a `youtube_link`
+### Replacing a `youtube_link` (read this first)
 
-`youtube_link` is the identity key, so changing it is **not** an edit — the tool
-sees a song it has never met. Run the plain command and you get:
+`youtube_link` is the identity key, so to the **plain command** changing it is
+**not** an edit — it sees a song it has never met, and you get:
 
 - a second row for the same song (the old one is orphaned, still `downloaded`)
 - and, because the file already exists at the canonical path, the new row
   **adopts the old audio and never fetches the new link**
 
-So if you swapped the link because the downloaded audio is wrong, the plain
-command will not fix it. Remove the old row and its file first, then run:
+So **don't run the plain command first.** Instead:
+
+**Step 1 — move the link onto the existing row.** `apply_metadata.py` finds the
+row by title + album and stores the new link on it — no duplicate row:
+
+```bash
+venv/bin/python apply_metadata.py            # look for "Matched by title + album"
+venv/bin/python apply_metadata.py --apply
+```
+
+If you only tidied the URL and the audio is fine, you are done.
+
+**Step 2 — only if you want the audio from the new link:** set the old file
+aside and queue the track for download. Replace the title to match yours:
 
 ```bash
 venv/bin/python - <<'PY'
 import sqlite3, os, common
-OLD = "https://music.youtube.com/watch?v=OLD_ID"          # the link you replaced
+TITLE, ALBUM = "Apna Bana Le", "Bhediya"
 c = sqlite3.connect('downloads.db')
-row = c.execute("SELECT id, file_path FROM tracks WHERE youtube_link = ?", (OLD,)).fetchone()
-if row:
-    path = common.resolve_path(row[1])
-    if path and os.path.exists(path):
-        os.rename(path, path + '.old')                    # keep a copy, don't destroy it
-    c.execute("DELETE FROM tracks WHERE id = ?", (row[0],))
-    c.commit()
-    print('removed row', row[0])
+row = c.execute("SELECT id, file_path FROM tracks WHERE title = ? AND album = ?", (TITLE, ALBUM)).fetchone()
+path = common.resolve_path(row[1])
+if path and os.path.exists(path):
+    os.rename(path, path + '.old')                    # keep a copy, don't destroy it
+c.execute("UPDATE tracks SET status = 'pending', error = '' WHERE id = ?", (row[0],))
+c.execute("INSERT INTO activity_log (track_id, action, details) VALUES (?, 'REQUEUED', 'New YouTube link; re-downloading.')", (row[0],))
+c.commit()
+print('requeued row', row[0])
 PY
 venv/bin/python youtube_music_manager.py
 ```
 
-Renaming to `.old` rather than deleting means you can compare the two and undo
-if the new version is worse. Delete the `.old` file once you are happy.
-
-If you only tidied the URL and the audio is fine, update the link in place
-instead — no re-download, no duplicate row:
-
-```bash
-venv/bin/python -c "
-import sqlite3
-c = sqlite3.connect('downloads.db')
-c.execute('UPDATE tracks SET youtube_link = ? WHERE youtube_link = ?',
-          ('NEW_LINK', 'OLD_LINK'))
-c.commit(); print('remapped', c.total_changes)
-"
-```
+Expect `🎶 Started` / `✅ Completed` for that song. The old file must be moved
+out of the way first — otherwise the run finds it on disk and adopts it instead
+of downloading. Renaming to `.old` means you can compare the two and undo if
+the new version is worse. Delete the `.old` file once you are happy.
 
 ---
 
@@ -323,9 +419,21 @@ venv/bin/python youtube_music_manager.py [--repair [--apply] [--fetch-art]]
 Standalone scripts:
 
 ```bash
+venv/bin/python apply_metadata.py             # preview JSON edits (dry run)
+venv/bin/python apply_metadata.py --apply     # apply them to the database and files
 venv/bin/python organize_albums.py            # file stray tracks into album folders
 venv/bin/python repair.py --apply             # same as --repair --apply
 ```
+
+**Which tool when?**
+
+| Situation | Use |
+|---|---|
+| Added new songs to the JSON | `youtube_music_manager.py` |
+| Corrected title / artist / album / year / cover in the JSON | `apply_metadata.py` (or the plain command) |
+| Changed a `youtube_link` in the JSON | `apply_metadata.py` — see [Replacing a `youtube_link`](#replacing-a-youtube_link-read-this-first) |
+| Files moved, renamed by hand, or restored from a backup | `--repair` |
+| A file's tags were changed by another program | `apply_metadata.py`, or `--retag` |
 
 ---
 
@@ -387,7 +495,7 @@ venv/bin/python youtube_music_manager.py --repair --apply --fetch-art
 | **file_path rewrites** | Rows whose stored path was wrong or still absolute |
 | **Files to relocate** | Files sitting outside their canonical album folder |
 | **Status promotions** | Rows marked `failed`/`processing` whose audio is verifiably present. Promoted to `downloaded` — **this is what stops working songs being re-fetched from YouTube** |
-| **Metadata re-syncs** | Fields the JSON has corrected but the database still holds stale |
+| **Metadata re-syncs** | `title`, `artist`, `album` or `image_url` values the JSON has corrected but the database still holds stale. `year` and `youtube_link` are not checked here — use `apply_metadata.py` |
 | **Unusable cached cover art** | Cached blobs that are not JPEG/PNG |
 | **Tracks with no cover art** | Downloaded tracks with an `image_url` but no embedded art |
 
@@ -722,6 +830,11 @@ downloaded** and the files left byte-identical. Two caveats:
 If you only want to keep the old log, copy the table across from
 `downloads.db.old` before deleting it.
 
-**Git:** `downloads.db`, `downloads.db.bak`, `Songs/` and `venv/` are ignored.
-The repository tracks only source, `requirements.txt`, and
-`songs_meta_data.json`.
+**Git:** `Songs/`, `venv/`, `downloads.db.bak` and the SQLite `-wal`/`-shm`
+sidecars are ignored. The repository tracks the source, `requirements.txt`,
+`songs_meta_data.json`, the classifier's data (`review.json`, `features.npz`,
+`probe.pkl`) and — at the owner's request — `downloads.db` itself. The
+database is ~90 MB and git stores a full copy on every commit that touches it,
+so commit it sparingly. The timestamped backups `apply_metadata.py` makes
+(`downloads.db.<YYYYMMDD-HHMMSS>.bak`) are **not** covered by `.gitignore`;
+delete them rather than committing them.
