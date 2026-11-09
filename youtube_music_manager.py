@@ -69,6 +69,12 @@ def init_db():
         except sqlite3.OperationalError:
             pass # Column already exists
 
+        # Release year, written to the file's date tag (shown as "Year").
+        try:
+            cursor.execute("ALTER TABLE tracks ADD COLUMN year INTEGER")
+        except sqlite3.OperationalError:
+            pass # Column already exists
+
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS activity_log (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -115,6 +121,14 @@ def reset_stranded_tracks():
             conn.commit()
     return [row[1] for row in stranded]
 
+def parse_year(value):
+    """A four-digit year as an int, or None when missing or not a year."""
+    try:
+        year = int(str(value).strip()[:4])
+    except (TypeError, ValueError):
+        return None
+    return year if 1000 <= year <= 9999 else None
+
 def sync_json_to_db():
     """Reads the JSON file, inserting new tracks and refreshing changed metadata."""
     if not os.path.exists(JSON_PATH):
@@ -140,18 +154,19 @@ def sync_json_to_db():
             artist = track.get("artist") or "Unknown Artist"
             album = track.get("album") or "Unknown Album"
             image_url = track.get("image_url") or ""
+            year = parse_year(track.get("year"))
 
             cursor.execute("""
-                SELECT id, title, artist, album, image_url, status
+                SELECT id, title, artist, album, image_url, year, status
                 FROM tracks WHERE youtube_link = ?
             """, (youtube_link,))
             existing = cursor.fetchone()
 
             if not existing:
                 cursor.execute("""
-                    INSERT INTO tracks (title, artist, album, image_url, youtube_link, status, error)
-                    VALUES (?, ?, ?, ?, ?, 'pending', '')
-                """, (title, artist, album, image_url, youtube_link))
+                    INSERT INTO tracks (title, artist, album, image_url, year, youtube_link, status, error)
+                    VALUES (?, ?, ?, ?, ?, ?, 'pending', '')
+                """, (title, artist, album, image_url, year, youtube_link))
                 inserted_count += 1
                 continue
 
@@ -164,12 +179,14 @@ def sync_json_to_db():
                 changes["album"] = album
             if existing["image_url"] != image_url:
                 changes["image_url"] = image_url
+            if existing["year"] != year:
+                changes["year"] = year
 
             if not changes:
                 continue
 
-            # Every tracked field ends up inside the file: title, artist and
-            # album become tags, and title/album also decide where it is filed.
+            # Every tracked field ends up inside the file: title, artist, album
+            # and year become tags, and title/album also decide where it is filed.
             # So any correction to an already-downloaded track means the file
             # has to be rewritten, not just the database row - otherwise the
             # JSON and the audio silently diverge.
@@ -367,13 +384,18 @@ def build_cover(image_bytes):
         return MP4Cover(image_bytes, imageformat=MP4Cover.FORMAT_PNG)
     return None
 
-def add_metadata(file_path, title, artist, album, image_bytes):
+def add_metadata(file_path, title, artist, album, image_bytes, year=None):
     """Injects metadata into the .m4a file."""
     try:
         audio = MP4(file_path)
         audio["\xa9nam"] = [title]
         audio["\xa9ART"] = [artist]
         audio["\xa9alb"] = [album]
+        # ©day is the MP4 release-date atom; players show it as "Year".
+        if year:
+            audio["\xa9day"] = [str(year)]
+        elif "\xa9day" in audio:
+            del audio["\xa9day"]
 
         cover = build_cover(image_bytes)
         if cover is not None:
@@ -412,7 +434,8 @@ def finalize_track(track, file_path, image_bytes):
     track_id = track["id"]
 
     log_activity(track_id, "ADDING_METADATA", "Writing tags and cover art.")
-    add_metadata(file_path, track["title"], track["artist"], track["album"], image_bytes)
+    add_metadata(file_path, track["title"], track["artist"], track["album"], image_bytes,
+                 year=track.get("year"))
 
     log_activity(track_id, "CALCULATING_HASH", "Generating SHA-256 hash.")
     final_hash = calculate_file_hash(file_path)
